@@ -67,7 +67,7 @@ export default function LogoCloud() {
               },
               {
                 name: "Lab3",
-                src: "/images/lab3-logo.png",
+                src: "/images/lab3-logo.svg",
                 className: "lab3-logo",
                 href: "https://lab3apps.com/",
               },
@@ -110,7 +110,7 @@ export default function LogoCloud() {
       {/* Add custom styles for Lab3 and WTW logos */}
       <style jsx global>{`
         .lab3-logo {
-          filter: brightness(0) saturate(100%) invert(19%) sepia(98%) saturate(2254%) hue-rotate(195deg) brightness(96%) contrast(101%);
+          max-height: 32px; /* Adjust height to match other logos */
         }
 
         .dark .lab3-logo {
