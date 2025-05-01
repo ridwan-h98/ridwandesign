@@ -17,8 +17,12 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "UX Portfolio",
-  description: "Showcasing my UX design work and process",
+  title: "Ridwan's Portfolio",
+  description: "Showcasing Ridwan's UX design work and process",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
     generator: 'v0.dev'
 }
 
@@ -29,6 +33,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${instrumentSerif.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body className="font-helvetica antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ScrollToTop />

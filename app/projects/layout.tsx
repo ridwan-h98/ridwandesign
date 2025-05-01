@@ -4,8 +4,8 @@ import Footer from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Projects | UX Portfolio",
-  description: "View my UX design projects and case studies",
+  title: "Projects | Ridwan's Portfolio",
+  description: "View Ridwan's UX design projects and case studies",
 }
 
 export default function ProjectsLayout({
