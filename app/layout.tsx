@@ -1,10 +1,26 @@
+import "./globals.css"
 import type React from "react"
-import { Analytics } from "@vercel/analytics/react"
-import { instrumentSerif } from "@/utils/fonts"
 import { ThemeProvider } from "@/components/theme-provider"
-import ScrollToTop from "@/components/scroll-to-top"
 import ScrollProgress from "@/components/scroll-progress"
+import type { Metadata } from "next"
+import { Instrument_Serif } from "next/font/google"
+import ScrollToTop from "@/components/scroll-to-top"
+import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
+
+const instrumentSerif = Instrument_Serif({
+  weight: ["400"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-instrument-serif",
+})
+
+export const metadata: Metadata = {
+  title: "UX Portfolio",
+  description: "Showcasing my UX design work and process",
+    generator: 'v0.dev'
+}
 
 export default function RootLayout({
   children,
@@ -24,10 +40,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'
-
-export const metadata = {
-      generator: 'v0.dev'
-    };

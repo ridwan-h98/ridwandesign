@@ -72,8 +72,8 @@
     "rehype-stringify": "latest",
     "rehype-slug": "latest",
     "@tailwindcss/typography": "latest",
-    "@vercel/analytics": "latest",
-    "web-vitals": "latest"
+    "web-vitals": "latest",
+    "@vercel/analytics": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",
