@@ -47,7 +47,7 @@ export default function LogoCloud() {
             {[
               {
                 name: "Home Office",
-                src: "/images/home-office-logo.png",
+                src: "/images/home-office-logo.svg",
                 href: "https://www.gov.uk/government/organisations/home-office",
               },
               {
@@ -89,15 +89,18 @@ export default function LogoCloud() {
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}
               >
-                <Image
-                  src={logo.src || "/placeholder.svg"}
-                  alt={logo.name}
-                  width={110}
-                  height={36}
-                  className={`max-h-8 w-auto transition-opacity duration-300 ${
-                    logo.className ? logo.className : ""
-                  } ${logo.name !== "Lab3" && logo.name !== "WTW" ? "dark:brightness-0 dark:invert" : ""}`}
-                />
+                <div className="relative w-full h-8 flex items-center justify-center">
+                  <Image
+                    src={logo.src || "/placeholder.svg"}
+                    alt={logo.name}
+                    width={110}
+                    height={36}
+                    className={`max-h-8 w-auto object-contain ${
+                      logo.className ? logo.className : ""
+                    } ${logo.name !== "Lab3" && logo.name !== "WTW" ? "dark:brightness-0 dark:invert" : ""}`}
+                    unoptimized
+                  />
+                </div>
               </a>
             ))}
           </div>
