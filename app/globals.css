@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add Helvetica Neue font-face declarations */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue"), local("HelveticaNeue");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Medium"), local("HelveticaNeue-Medium");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 30 30% 96%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 80%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 15%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 28%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300;
+  }
+
+  /* Fix for the circular dependency - remove the @apply with animation classes */
+  .animate-on-scroll {
+    opacity: 0;
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(203, 213, 225, 0.5) transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(203, 213, 225, 0.5);
+    border-radius: 20px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(148, 163, 184, 0.7);
+  }
+}
+
+/* Add grid background utility */
+.bg-grid-slate-100 {
+  background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+    linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+}
+
+.dark .bg-grid-slate-100 {
+  background-image: linear-gradient(to right, rgba(241, 245, 249, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(241, 245, 249, 0.1) 1px, transparent 1px);
+}
+
+/* Dark mode styles for various components */
+.dark .prose {
+  color: #e5e7eb;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: #f3f4f6;
+}
+
+.dark .prose a {
+  color: #93c5fd;
+}
+
+.dark .prose strong {
+  color: #f3f4f6;
+}
+
+.dark .prose code {
+  color: #f3f4f6;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .prose blockquote {
+  color: #d1d5db;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .prose hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .prose img {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .prose figure figcaption {
+  color: #9ca3af;
+}
+
+.dark .prose ol > li::before {
+  color: #9ca3af;
+}
+
+.dark .prose ul > li::before {
+  background-color: #6b7280;
+}
+
+.dark .prose table {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .prose thead {
+  color: #f3f4f6;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.dark .prose tbody tr {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
