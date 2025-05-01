@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Ridwan's Portfolio",
   description: "Showcasing Ridwan's UX design work and process",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
     generator: 'v0.dev'
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${instrumentSerif.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="font-helvetica antialiased">
