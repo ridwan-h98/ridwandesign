@@ -97,11 +97,11 @@ export default function Hero() {
             Product Design
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-8 md:mb-10">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight mb-8 md:mb-10">
             <span className="bg-gradient-to-br from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent">
               Crafting{" "}
             </span>
-            <span className="font-instrument-serif font-normal italic text-gray-700 dark:text-gray-300">
+            <span className="font-instrument-serif font-normal italic bg-gradient-to-r from-gray-900 via-black to-gray-800 dark:from-gray-100 dark:via-blue-200 dark:to-gray-200 bg-clip-text text-transparent">
               meaningful
             </span>{" "}
             <span className="bg-gradient-to-br from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent">

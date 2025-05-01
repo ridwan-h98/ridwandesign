@@ -47,7 +47,7 @@ export default function LogoCloud() {
             {[
               {
                 name: "Home Office",
-                src: "/images/home-office-logo.svg", // Changed from .png to .svg
+                src: "/images/home-office-logo.png",
                 href: "https://www.gov.uk/government/organisations/home-office",
               },
               {
@@ -97,10 +97,6 @@ export default function LogoCloud() {
                   className={`max-h-8 w-auto transition-opacity duration-300 ${
                     logo.className ? logo.className : ""
                   } ${logo.name !== "Lab3" && logo.name !== "WTW" ? "dark:brightness-0 dark:invert" : ""}`}
-                  onError={(e) => {
-                    // Fallback to placeholder if image fails to load
-                    e.currentTarget.src = `/placeholder.svg?text=${encodeURIComponent(logo.name)}`
-                  }}
                 />
               </a>
             ))}
