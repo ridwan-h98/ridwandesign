@@ -8,9 +8,9 @@ import ScrollToTop from "@/components/scroll-to-top"
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
 
+// Configure the font with only the required properties
 const instrumentSerif = Instrument_Serif({
-  weight: ["400"],
-  style: ["normal", "italic"],
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
   variable: "--font-instrument-serif",
@@ -20,8 +20,11 @@ export const metadata: Metadata = {
   title: "Ridwan's Portfolio",
   description: "Showcasing Ridwan's UX design work and process",
   icons: {
-    icon: "/favicon.png",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", type: "image/png" },
   },
     generator: 'v0.dev'
 }
@@ -32,11 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${instrumentSerif.variable}`}>
-      <head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </head>
+    <html lang="en" suppressHydrationWarning className={instrumentSerif.variable}>
       <body className="font-helvetica antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ScrollToTop />

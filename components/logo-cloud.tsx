@@ -52,17 +52,17 @@ export default function LogoCloud() {
               },
               {
                 name: "National Highways",
-                src: "/images/national-highways-logo.png",
+                src: "/images/national-highways-logo.svg",
                 href: "https://nationalhighways.co.uk/",
               },
               {
                 name: "Capgemini Invent",
-                src: "/images/capgemini-invent-logo.png",
+                src: "/images/capgemini-invent-logo.svg",
                 href: "https://www.capgemini.com/about-us/who-we-are/our-brands/capgemini-invent/",
               },
               {
                 name: "Eucalyptus",
-                src: "/images/eucalyptus-logo.png",
+                src: "/images/eucalyptus-logo.svg",
                 href: "https://www.eucalyptus.health/",
               },
               {
@@ -92,7 +92,7 @@ export default function LogoCloud() {
                 <div className="relative w-full h-8 flex items-center justify-center">
                   <Image
                     src={logo.src || "/placeholder.svg"}
-                    alt={logo.name}
+                    alt={`${logo.name} logo`}
                     width={110}
                     height={36}
                     className={`max-h-8 w-auto object-contain ${
@@ -112,7 +112,7 @@ export default function LogoCloud() {
         .lab3-logo {
           filter: brightness(0) saturate(100%) invert(19%) sepia(98%) saturate(2254%) hue-rotate(195deg) brightness(96%) contrast(101%);
         }
-        
+
         .dark .lab3-logo {
           filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
         }
@@ -120,7 +120,7 @@ export default function LogoCloud() {
         .wtw-logo {
           /* The logo is already purple, so we don't need to modify it in light mode */
         }
-        
+
         .dark .wtw-logo {
           filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
         }
