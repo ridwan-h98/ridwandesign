@@ -3,18 +3,9 @@ import type React from "react"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollProgress from "@/components/scroll-progress"
 import type { Metadata } from "next"
-import { Instrument_Serif } from "next/font/google"
 import ScrollToTop from "@/components/scroll-to-top"
 import { Analytics } from "@vercel/analytics/react"
 import { Suspense } from "react"
-
-// Configure the font with only the required properties
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-instrument-serif",
-})
 
 export const metadata: Metadata = {
   title: "Ridwan's Portfolio",
@@ -35,7 +26,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={instrumentSerif.variable}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+      </head>
       <body className="font-helvetica antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ScrollToTop />

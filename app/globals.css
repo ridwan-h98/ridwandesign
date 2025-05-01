@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Remove the Google Fonts import and rely on the link tag in layout.tsx */
+/* @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"); */
+
 /* Add Helvetica Neue font-face declarations */
 @font-face {
   font-family: "Helvetica Neue";
@@ -128,6 +131,11 @@
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background-color: rgba(148, 163, 184, 0.7);
+  }
+
+  /* Add class for Instrument Serif font with fallbacks */
+  .font-instrument-serif {
+    font-family: "Instrument Serif", Georgia, "Times New Roman", serif;
   }
 }
 

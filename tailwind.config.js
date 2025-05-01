@@ -12,7 +12,7 @@ module.exports = {
       fontFamily: {
         helvetica: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
         sans: ['"Helvetica Neue"', "Helvetica", "Arial", "sans-serif"],
-        "instrument-serif": ["var(--font-instrument-serif)", "serif"],
+        "instrument-serif": ["'Instrument Serif'", "Georgia", "Times New Roman", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",

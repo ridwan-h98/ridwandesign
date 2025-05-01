@@ -71,9 +71,9 @@
     "remark-rehype": "latest",
     "rehype-stringify": "latest",
     "rehype-slug": "latest",
-    "@tailwindcss/typography": "latest",
     "web-vitals": "latest",
-    "@vercel/analytics": "latest"
+    "@vercel/analytics": "latest",
+    "@tailwindcss/typography": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",
