@@ -30,8 +30,8 @@ export default function ScrollProgress() {
         className="h-full transition-all duration-150 ease-out"
         style={{
           width: `${scrollProgress * 100}%`,
-          background: "linear-gradient(to right, #3b82f6, #1d4ed8)",
-          backgroundImage: "linear-gradient(to right, #3b82f6, #1d4ed8)",
+          background: "linear-gradient(to right, #3b82f6, #2563eb)",
+          backgroundImage: "linear-gradient(to right, #3b82f6, #2563eb)",
         }}
         role="progressbar"
         aria-valuenow={scrollProgress * 100}

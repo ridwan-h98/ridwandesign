@@ -108,12 +108,12 @@ export default function Metrics() {
           {metrics.map((metric, index) => (
             <div
               key={index}
+              className="group relative bg-white/90 dark:bg-gray-800 p-8 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03]"
               style={{
                 boxShadow:
                   "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
-                transition: "transform 0.3s ease, box-shadow 0.4s ease",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
               }}
-              className="group relative bg-white/90 dark:bg-gray-800 p-8 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:transform hover:scale-[1.03]"
             >
               {/* Number */}
               <div className="mb-6">

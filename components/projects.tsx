@@ -191,11 +191,12 @@ export default function Projects() {
                 <div key={project.slug} ref={(el) => (elementsRef.current[index] = el)} className="animate-on-scroll">
                   <Link href={`/case-studies/${project.slug}`} className="group">
                     <div
+                      className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 flex flex-col md:flex-row group-hover:transform group-hover:scale-[1.02]"
                       style={{
                         boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-                        transition: "transform 0.3s ease, box-shadow 0.4s ease",
+                        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                        "--hover-shadow": "0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -10px rgba(0, 0, 0, 0.08)",
                       }}
-                      className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 flex flex-col md:flex-row hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:transform hover:scale-[1.02]"
                     >
                       <div className="md:w-1/2 relative h-64 sm:h-80 md:h-[500px]">
                         {/* 
@@ -282,11 +283,12 @@ export default function Projects() {
             <div className="md:col-span-8 group">
               <Link href={`/case-studies/${thoughtPieces[0].slug}`} className="block h-full">
                 <div
+                  className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col group-hover:transform group-hover:scale-[1.02]"
                   style={{
                     boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-                    transition: "transform 0.3s ease, box-shadow 0.4s ease",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "--hover-shadow": "0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -10px rgba(0, 0, 0, 0.08)",
                   }}
-                  className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:transform hover:scale-[1.02]"
                 >
                   <div className="relative h-72 md:h-96">
                     <Image
@@ -318,11 +320,12 @@ export default function Projects() {
             <div className="md:col-span-4 group">
               <Link href={`/case-studies/${thoughtPieces[1].slug}`} className="block h-full">
                 <div
+                  className="bg-gray-50 dark:bg-[oklch(0.24_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col p-6 sm:p-8 md:p-10 group-hover:transform group-hover:scale-[1.02]"
                   style={{
                     boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-                    transition: "transform 0.3s ease, box-shadow 0.4s ease",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "--hover-shadow": "0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -10px rgba(0, 0, 0, 0.08)",
                   }}
-                  className="bg-gray-50 dark:bg-[oklch(0.24_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col p-6 sm:p-8 md:p-10 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:transform hover:scale-[1.02]"
                 >
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300 mb-4">
@@ -344,11 +347,12 @@ export default function Projects() {
             <div className="md:col-span-7 group">
               <Link href={`/case-studies/${thoughtPieces[2].slug}`} className="block h-full">
                 <div
+                  className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col md:flex-row group-hover:transform group-hover:scale-[1.02]"
                   style={{
                     boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-                    transition: "transform 0.3s ease, box-shadow 0.4s ease",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "--hover-shadow": "0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -10px rgba(0, 0, 0, 0.08)",
                   }}
-                  className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col md:flex-row hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:transform hover:scale-[1.02]"
                 >
                   <div className="md:w-2/5 relative h-56 md:h-auto">
                     <Image
@@ -378,11 +382,12 @@ export default function Projects() {
             <div className="md:col-span-5 group">
               <Link href={`/case-studies/${thoughtPieces[3].slug}`} className="block h-full">
                 <div
+                  className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col group-hover:transform group-hover:scale-[1.02]"
                   style={{
                     boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-                    transition: "transform 0.3s ease, box-shadow 0.4s ease",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "--hover-shadow": "0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -10px rgba(0, 0, 0, 0.08)",
                   }}
-                  className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transition-all duration-500 h-full flex flex-col hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:transform hover:scale-[1.02]"
                 >
                   <div className="relative h-56">
                     <Image
@@ -412,6 +417,11 @@ export default function Projects() {
           </div>
         </div>
       </div>
+      <style jsx global>{`
+  .group:hover .group-hover\\:shadow-2xl {
+    box-shadow: var(--hover-shadow);
+  }
+`}</style>
     </section>
   )
 }

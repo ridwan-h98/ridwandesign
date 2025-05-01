@@ -33,17 +33,8 @@ export default function LogoCloud() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 animate-on-scroll font-helvetica border-b border-gray-100 dark:border-white/20 relative overflow-hidden"
-      style={{
-        background: "radial-gradient(circle at center 300%, rgba(191, 219, 254, 0.3) 0%, rgba(255, 255, 255, 0) 70%)",
-      }}
+      className="py-16 bg-white dark:bg-[oklch(0.2_0.01_256.848)] animate-on-scroll font-helvetica border-b border-gray-100 dark:border-white/20"
     >
-      <div
-        className="absolute inset-0 hidden dark:block"
-        style={{
-          background: "radial-gradient(circle at center 150%, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%)",
-        }}
-      ></div>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-10">
@@ -92,11 +83,11 @@ export default function LogoCloud() {
                 href={logo.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 h-24 transition-all duration-300 hover:shadow-xl hover:transform hover:scale-[1.05]"
                 style={{
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-                  transition: "transform 0.3s ease, box-shadow 0.4s ease",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}
-                className="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 h-24 transition-all duration-300 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:transform hover:scale-[1.05]"
               >
                 <Image
                   src={logo.src || "/placeholder.svg"}

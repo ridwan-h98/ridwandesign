@@ -110,11 +110,11 @@ export default function Process() {
           {/* Card 1 */}
           <div
             ref={(el) => (elementsRef.current[0] = el)}
-            className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transform rotate-[-2deg] transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:rotate-[-1deg] hover:scale-105"
+            className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transform rotate-[-2deg] transition-all duration-300 hover:shadow-2xl hover:scale-[1.03]"
             style={{
               transformOrigin: "center",
               boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-              transition: "transform 0.3s ease, box-shadow 0.4s ease",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
             <div className="bg-gradient-to-t from-blue-200 to-blue-100 dark:from-[oklch(0.25_0.01_256.848)] dark:to-[oklch(0.28_0.01_256.848)] text-blue-800 dark:text-blue-100 p-8 shadow-sm">
@@ -134,11 +134,11 @@ export default function Process() {
           {/* Card 2 */}
           <div
             ref={(el) => (elementsRef.current[1] = el)}
-            className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transform rotate-[1deg] transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:rotate-[0deg] hover:scale-105"
+            className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transform rotate-[1deg] transition-all duration-300 hover:shadow-2xl hover:scale-[1.03]"
             style={{
               transformOrigin: "center",
               boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-              transition: "transform 0.3s ease, box-shadow 0.4s ease",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
             <div className="bg-gradient-to-t from-amber-100 to-amber-50 dark:from-[oklch(0.25_0.01_256.848)] dark:to-[oklch(0.28_0.01_256.848)] text-amber-700 dark:text-amber-100 p-8 shadow-sm">
@@ -158,11 +158,11 @@ export default function Process() {
           {/* Card 3 */}
           <div
             ref={(el) => (elementsRef.current[2] = el)}
-            className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transform rotate-[3deg] transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-blue-900/30 hover:rotate-[2deg] hover:scale-105"
+            className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-lg overflow-hidden border border-gray-200 dark:border-white/20 transform rotate-[3deg] transition-all duration-300 hover:shadow-2xl hover:scale-[1.03]"
             style={{
               transformOrigin: "center",
               boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
-              transition: "transform 0.3s ease, box-shadow 0.4s ease",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
             <div className="bg-gradient-to-t from-sky-200 to-sky-100 dark:from-[oklch(0.25_0.01_256.848)] dark:to-[oklch(0.28_0.01_256.848)] text-sky-800 dark:text-sky-100 p-8 shadow-sm">

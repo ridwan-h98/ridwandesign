@@ -266,6 +266,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
                 src={
                   caseStudy.image ||
                   "/placeholder.svg?height=600&width=1200&text=Case+Study:+" + encodeURIComponent(caseStudy.title) ||
+                  "/placeholder.svg" ||
                   "/placeholder.svg"
                 }
                 alt={caseStudy.title}

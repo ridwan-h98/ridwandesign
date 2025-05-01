@@ -76,7 +76,19 @@ export default function AboutMe() {
           {/* Left column - About text and experience (moved from right) */}
           <div ref={(el) => (elementsRef.current[1] = el)} className="animate-on-scroll order-2 md:order-1">
             {/* Nest everything in a single card */}
-            <div className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden">
+            <div
+              className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
+              style={{
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.02)"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = ""
+              }}
+            >
               <div className="p-8 md:p-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
                   <span className="font-instrument-serif font-normal italic">Lil'</span>about me
@@ -266,13 +278,12 @@ export default function AboutMe() {
             className="animate-on-scroll flex justify-center items-center h-full order-1 md:order-2"
           >
             <div
+              className="relative bg-white dark:bg-gray-100 p-5 shadow-lg max-w-lg mx-auto transform rotate-[-2deg] transition-all duration-500 hover:rotate-[3deg] hover:scale-110 hover:shadow-2xl"
               style={{
                 animation: "polaroidIn 1s ease-out forwards",
                 opacity: 0,
                 transform: "translateY(20px) rotate(-2deg)",
-                transition: "transform 0.5s ease, box-shadow 0.5s ease",
               }}
-              className="relative bg-white dark:bg-gray-100 p-5 shadow-lg max-w-lg mx-auto transform rotate-[-2deg] transition-all duration-500 hover:rotate-[3deg] hover:scale-110 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)]"
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image

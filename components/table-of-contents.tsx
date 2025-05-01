@@ -49,7 +49,7 @@ export default function TableOfContents({ headings }) {
               <li key={heading.id} className={heading.level === 3 ? "ml-4" : ""}>
                 <a
                   href={`#${heading.id}`}
-                  className={`block py-2 px-3 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(0.25_0.01_256.848)] hover:text-blue-600 dark:hover:text-blue-400 ${
+                  className={`block py-2 px-3 rounded-lg text-sm font-medium transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 hover:transform hover:translate-x-1 ${
                     activeId === heading.id
                       ? "bg-gray-50 dark:bg-[oklch(0.25_0.01_256.848)] text-blue-600 dark:text-blue-400"
                       : "text-gray-700 dark:text-gray-300"
