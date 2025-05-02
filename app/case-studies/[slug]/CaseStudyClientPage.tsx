@@ -267,6 +267,8 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
                   caseStudy.image ||
                   "/placeholder.svg?height=600&width=1200&text=Case+Study:+" + encodeURIComponent(caseStudy.title) ||
                   "/placeholder.svg" ||
+                  "/placeholder.svg" ||
+                  "/placeholder.svg" ||
                   "/placeholder.svg"
                 }
                 alt={caseStudy.title}
@@ -487,10 +489,17 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
                           /https:\/\/hebbkx1anhila5yf\.public\.blob\.vercel-storage\.com\/UX%20Maturity%20Scale-HjJY5UxNmn3t6kVxtRZDXbOzIqBKm3\.webp/g,
                           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/UX%20Maturity%20Scale-pHV4GwtZnls5JBnsntaSnpSh0dxwG1.webp",
                         )
-                      : caseStudy.slug === "structuring-user-interviews" ||
-                          caseStudy.slug === "national-rostering-service"
-                        ? enhanceInterviewContent(caseStudy.contentHtml, caseStudy.slug)
-                        : caseStudy.contentHtml,
+                      : caseStudy.slug === "growing-juniper"
+                        ? caseStudy.contentHtml
+                            .replace(
+                              /<p>Furthermore[\s\S]*?<img[\s\S]*?Growing%20Feature%20Costs[\s\S]*?<\/p>/g,
+                              "<p>Furthermore, we implemented more tracking parameters such as heatmaps to give confidence in design decisions. With a process of marketing insight, traffic analysis and heatmapping, it gave us an idea to understand customer values. Giving us the groundwork for us to design sites and services. It's important to note that this gave us an idea and not a grounded understanding.</p>",
+                            )
+                            .replace(/<img[\s\S]*?Growing%20Feature%20Costs[\s\S]*?\*.*?\*/g, "")
+                        : caseStudy.slug === "structuring-user-interviews" ||
+                            caseStudy.slug === "national-rostering-service"
+                          ? enhanceInterviewContent(caseStudy.contentHtml, caseStudy.slug)
+                          : caseStudy.contentHtml,
                 }}
               />
               {/* The component itself doesn't control the specific placement of images within the case study content.
