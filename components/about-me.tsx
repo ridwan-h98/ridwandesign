@@ -270,6 +270,55 @@ export default function AboutMe() {
                 </div>
               </div>
             </div>
+            {/* Mentoring Section - Now placed outside the main card */}
+            <div className="mt-8">
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 border border-blue-100 dark:border-blue-800/30">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-5 h-5 text-blue-600 dark:text-blue-300"
+                    >
+                      <path d="M12 20h9"></path>
+                      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100 text-lg">UX Design Mentor</h4>
+                </div>
+                <p className="text-gray-700 dark:text-gray-300 mb-5">
+                  I'm passionate about helping junior and graduate designers grow in their careers. I offer mentoring
+                  sessions through ADPList where I provide guidance on portfolio development, career advice, and UX best
+                  practices.
+                </p>
+                <a
+                  href="https://adplist.org/mentors/ridwan-hoque"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-300 font-medium text-sm no-underline"
+                >
+                  Book a mentoring session
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-2 w-4 h-4"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Right column - Polaroid image (moved from left) */}
