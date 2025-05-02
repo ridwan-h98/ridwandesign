@@ -272,7 +272,19 @@ export default function AboutMe() {
             </div>
             {/* Mentoring Section - Now placed outside the main card */}
             <div className="mt-8">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 border border-blue-100 dark:border-blue-800/30">
+              <div
+                className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
+                style={{
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow =
+                    "0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.02)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = ""
+                }}
+              >
                 <div className="flex items-center mb-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mr-4">
                     <svg
@@ -300,7 +312,7 @@ export default function AboutMe() {
                   href="https://adplist.org/mentors/ridwan-hoque"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-300 font-medium text-sm no-underline"
+                  className="flex items-center justify-center py-3 px-4 bg-gray-100 dark:bg-gray-800/60 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-200 rounded-lg transition-colors duration-300 font-medium text-sm no-underline"
                 >
                   Book a mentoring session
                   <svg
