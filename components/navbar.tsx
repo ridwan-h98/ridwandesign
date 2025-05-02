@@ -90,12 +90,12 @@ export default function Navbar() {
               >
                 About
               </Link>
-              <Link
-                href="#contact"
+              <a
+                href="mailto:ridwanulhoque98@gmail.com"
                 className="px-4 py-1.5 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/80 dark:hover:bg-gray-800/80 transition-colors duration-300 text-xs"
               >
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
         </nav>
@@ -168,13 +168,13 @@ export default function Navbar() {
                 >
                   About
                 </Link>
-                <Link
-                  href="#contact"
+                <a
+                  href="mailto:ridwanulhoque98@gmail.com"
                   className="block py-3 text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
-                </Link>
+                </a>
               </div>
             </div>
 

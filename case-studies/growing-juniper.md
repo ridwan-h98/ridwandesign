@@ -50,7 +50,6 @@ Before site deployment, we leveraged A/B testing using Google Optimise. Tests we
 *A/B testing different ad designs and landing pages, showing performance improvements of 1% to 4% across variations*
 
 
-
 ## Results
 
 An average of 2% improvement occurred across 16 sites, with a high of 7% in some. Moreover, successfully implemented an optimisation process that both UK and AUS teams adopted. It wasn't a 'finger in the wind' process anymore - now there was an actual understanding of how to build, learn, and serve our customers. This new process also reduced the turnaround time of site improvement for future projects - from an average of months to now two weeks.
