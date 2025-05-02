@@ -49,6 +49,8 @@ Before site deployment, we leveraged A/B testing using Google Optimise. Tests we
 ![A/B testing of different ad designs](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Testing%20Designs-U0Y4ubjPlkZSd7o3ihN7qG6WisgEWG.webp)
 *A/B testing different ad designs and landing pages, showing performance improvements of 1% to 4% across variations*
 
+![Juniper customer with product](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/juniper-thumbnail-IHXqBdikOHq8vrZgw97aDTrGHbAZ5O.webp)
+*A satisfied Juniper customer with their product delivery, representing our end goal of conversion*
 
 ## Results
 
