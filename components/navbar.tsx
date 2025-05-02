@@ -32,6 +32,21 @@ export default function Navbar() {
     }
   }, [isMenuOpen])
 
+  // Handle hash navigation after page load
+  useEffect(() => {
+    // Check if we arrived from another page with a hash in the URL
+    if (window.location.hash) {
+      // Wait a moment for the page to fully render
+      setTimeout(() => {
+        const sectionId = window.location.hash.substring(1) // Remove the # character
+        const section = document.getElementById(sectionId)
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" })
+        }
+      }, 300)
+    }
+  }, [])
+
   return (
     <div className="fixed top-0 w-full z-50">
       {/* Full-width background that appears on scroll */}
@@ -44,7 +59,14 @@ export default function Navbar() {
       <div className="flex justify-between items-center container mx-auto px-4 sm:px-6 lg:px-8 pt-5 relative z-10">
         {/* Logo on the left */}
         <div className="flex-shrink-0">
-          <Link href="/" className="text-sm font-medium text-gray-900 dark:text-gray-100">
+          <Link
+            href="/"
+            className="text-sm font-medium text-gray-900 dark:text-gray-100"
+            onClick={() => {
+              // Force scroll to top when clicking the logo
+              window.scrollTo(0, 0)
+            }}
+          >
             Ridwan
           </Link>
         </div>
@@ -62,14 +84,12 @@ export default function Navbar() {
               >
                 LinkedIn
               </a>
-              <a
-                href="/cv.pdf"
-                target="_blank"
+              <Link
+                href="/#about"
                 className="px-4 py-1.5 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/80 dark:hover:bg-gray-800/80 transition-colors duration-300 text-xs"
-                rel="noreferrer"
               >
-                CV
-              </a>
+                About
+              </Link>
               <Link
                 href="#contact"
                 className="px-4 py-1.5 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/80 dark:hover:bg-gray-800/80 transition-colors duration-300 text-xs"
@@ -141,15 +161,13 @@ export default function Navbar() {
                 >
                   LinkedIn
                 </a>
-                <a
-                  href="/cv.pdf"
-                  target="_blank"
+                <Link
+                  href="/#about"
                   className="block py-3 text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
-                  rel="noreferrer"
                 >
-                  CV
-                </a>
+                  About
+                </Link>
                 <Link
                   href="#contact"
                   className="block py-3 text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
