@@ -69,7 +69,7 @@ export default function AboutMe() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-32 bg-white dark:bg-[oklch(0.2_0.01_256.848)] font-helvetica border-b border-gray-100 dark:border-white/20"
+      className="py-16 md:py-32 bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-[oklch(0.2_0.01_256.848)] dark:via-[oklch(0.19_0.01_256.848)] dark:to-[oklch(0.2_0.01_256.848)] font-helvetica border-b border-gray-100 dark:border-white/20"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
@@ -339,7 +339,7 @@ export default function AboutMe() {
             className="animate-on-scroll flex justify-center items-center h-full order-1 md:order-2"
           >
             <div
-              className="relative bg-white dark:bg-gray-100 p-5 shadow-lg max-w-lg mx-auto transform rotate-[-2deg] transition-all duration-500 hover:rotate-[3deg] hover:scale-110 hover:shadow-2xl"
+              className="relative bg-white dark:bg-gray-100 p-6 shadow-xl max-w-lg mx-auto transform rotate-[-2deg] transition-all duration-700 hover:rotate-[3deg] hover:scale-110 hover:shadow-2xl border border-gray-100"
               style={{
                 animation: "polaroidIn 1s ease-out forwards",
                 opacity: 0,

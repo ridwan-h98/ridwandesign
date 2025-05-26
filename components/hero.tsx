@@ -52,22 +52,20 @@ export default function Hero() {
   return (
     <section className="relative pt-36 pb-16 md:pt-64 md:pb-52 overflow-hidden font-helvetica border-b border-gray-100 dark:border-white/20 bg-white dark:bg-[oklch(0.2_0.01_256.848)]">
       {/* Background elements */}
+      {/* Enhanced background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full bg-white dark:bg-[oklch(0.2_0.01_256.848)]"></div>
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-white dark:bg-[oklch(0.2_0.01_256.848)]">
-          <div className="absolute inset-0 bg-white dark:bg-gradient-to-br dark:from-[oklch(0.2_0.01_256.848)] dark:to-[oklch(0.18_0.01_256.848)]"></div>
-          <div className="absolute inset-0 dark:bg-radial-gradient-to-t dark:from-blue-900/20 dark:via-blue-800/10 dark:to-transparent"></div>
-        </div>
-        <div className="absolute -top-20 -right-20 w-96 h-96 hidden dark:block dark:bg-blue-900/20 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute top-40 -left-20 w-72 h-72 hidden dark:block dark:bg-blue-900/20 rounded-full opacity-15 blur-3xl"></div>
-        <div className="absolute bottom-20 right-40 w-80 h-80 hidden dark:block dark:bg-blue-900/20 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute top-60 right-1/4 w-64 h-64 hidden dark:block dark:bg-gray-800/30 rounded-full opacity-15 blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full md:w-3/4 h-96 hidden dark:block dark:bg-gray-800 rounded-full opacity-35 blur-3xl"></div>
-        <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 w-full h-64 hidden dark:block dark:bg-gray-700 rounded-full opacity-30 blur-3xl"></div>
-        <div className="absolute -bottom-10 left-1/3 w-96 h-96 hidden dark:block dark:bg-gray-800 rounded-full opacity-25 blur-3xl"></div>
-        <div className="absolute -bottom-10 right-1/3 w-96 h-96 hidden dark:block dark:bg-gray-700 rounded-full opacity-25 blur-3xl"></div>
-        <div className="absolute -bottom-40 left-1/2 transform -translate-x-1/2 w-full h-80 hidden dark:block dark:bg-gray-600/50 rounded-full opacity-20 blur-2xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 dark:from-[oklch(0.2_0.01_256.848)] dark:via-[oklch(0.18_0.02_250)] dark:to-[oklch(0.16_0.03_245)]"></div>
+
+        {/* Animated gradient orbs */}
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute top-1/2 -left-32 w-64 h-64 bg-gradient-to-br from-violet-400/15 to-purple-500/15 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute bottom-20 right-1/4 w-72 h-72 bg-gradient-to-br from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
@@ -95,14 +93,14 @@ export default function Hero() {
             Product Design
           </div>
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight mb-8 md:mb-10">
-            <span className="bg-gradient-to-br from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8 md:mb-10">
+            <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-gray-200 bg-clip-text text-transparent">
               Crafting{" "}
             </span>
-            <span className="font-instrument-serif font-normal italic bg-gradient-to-r from-gray-900 via-black to-gray-800 dark:from-gray-100 dark:via-blue-200 dark:to-gray-200 bg-clip-text text-transparent">
+            <span className="font-instrument-serif font-normal italic bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 dark:from-blue-400 dark:via-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">
               meaningful
             </span>{" "}
-            <span className="bg-gradient-to-br from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-gray-200 bg-clip-text text-transparent">
               experiences
             </span>
           </h1>

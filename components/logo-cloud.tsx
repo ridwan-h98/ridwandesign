@@ -33,7 +33,7 @@ export default function LogoCloud() {
   return (
     <section
       ref={sectionRef}
-      className="py-16 bg-white dark:bg-[oklch(0.2_0.01_256.848)] animate-on-scroll font-helvetica border-b border-gray-100 dark:border-white/20"
+      className="py-20 bg-gradient-to-b from-white via-gray-50/50 to-white dark:from-[oklch(0.2_0.01_256.848)] dark:via-[oklch(0.19_0.01_256.848)] dark:to-[oklch(0.2_0.01_256.848)] animate-on-scroll font-helvetica border-b border-gray-100 dark:border-white/20"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
@@ -83,7 +83,7 @@ export default function LogoCloud() {
                 href={logo.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 h-24 transition-all duration-300 hover:shadow-xl hover:transform hover:scale-[1.05]"
+                className="flex items-center justify-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-200/60 dark:border-gray-700/60 h-24 transition-all duration-300 hover:shadow-xl hover:transform hover:scale-[1.05] hover:bg-white dark:hover:bg-gray-800 hover:border-blue-200 dark:hover:border-blue-500/30"
                 style={{
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",

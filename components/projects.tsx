@@ -199,15 +199,6 @@ export default function Projects() {
                       }}
                     >
                       <div className="md:w-1/2 relative h-64 sm:h-80 md:h-[500px]">
-                        {/* 
-                      Image Guidelines:
-                      - Recommended resolution: 1200x900px (4:3 ratio)
-                      - Safe area: Keep important content within the center 80% of the image
-                      - Margins: Leave 10% margin on all sides (120px top/bottom, 90px left/right)
-                      - The image will be cropped differently on various screen sizes
-                      - For mobile: Image will be wider and shorter (focus on center)
-                      - For desktop: Full height will be visible
-                      */}
                         <Image
                           src={
                             project.slug === "building-teams"
