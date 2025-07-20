@@ -81,16 +81,16 @@ export default function MarketingOptimizationProject() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[oklch(0.2_0.01_256.848)] font-helvetica">
+    <main className="min-h-screen bg-white dark:bg-[oklch(26.9%_0_0)] font-helvetica">
       {/* Hero section */}
-      <div className="bg-gray-50 dark:bg-[oklch(0.22_0.01_256.848)] pt-24 border-b border-gray-100 dark:border-white/20">
+      <div className="bg-gray-50 dark:bg-[oklch(26.9%_0_0)] pt-24 border-b border-gray-100 dark:border-white/20">
         <div className="container mx-auto px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column - Content */}
             <div>
               <Link
                 href="/#projects"
-                className="inline-flex items-center bg-white/90 dark:bg-[oklch(0.25_0.01_256.848)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[oklch(0.28_0.01_256.848)] transition-all duration-300 mb-8"
+                className="inline-flex items-center bg-white/90 dark:bg-[oklch(26.9%_0_0)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] transition-all duration-300 mb-8"
               >
                 <ArrowLeft className="h-3.5 w-3.5 mr-2" />
                 Back to Projects
@@ -109,11 +109,11 @@ export default function MarketingOptimizationProject() {
 
               {/* Project details with badges */}
               <div className="flex flex-wrap gap-3">
-                <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(0.25_0.01_256.848)] rounded-md border border-gray-200 dark:border-white/20">
+                <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Client:</span>
                   <span className="text-sm font-medium text-gray-900 dark:text-gray-100">UK E-commerce Company</span>
                 </div>
-                <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(0.25_0.01_256.848)] rounded-md border border-gray-200 dark:border-white/20">
+                <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                   <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Role:</span>
                   <span className="text-sm font-medium text-gray-900 dark:text-gray-100">UX Strategist & Designer</span>
                 </div>
@@ -141,10 +141,10 @@ export default function MarketingOptimizationProject() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Table of Contents */}
-            <div className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] p-6 rounded-2xl sticky top-24 border border-gray-200 dark:border-white/20 shadow-sm">
+            <div className="bg-white dark:bg-[oklch(26.9%_0_0)] p-6 rounded-2xl sticky top-24 border border-gray-200 dark:border-white/20 shadow-sm">
               <div className="relative z-10">
                 <div className="mb-6">
-                  <span className="inline-block px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-[oklch(0.25_0.01_256.848)] rounded-md border border-gray-200 dark:border-white/20">
+                  <span className="inline-block px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                     Table of Contents
                   </span>
                 </div>
@@ -153,7 +153,7 @@ export default function MarketingOptimizationProject() {
                     <li>
                       <a
                         href="#challenge"
-                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(0.25_0.01_256.848)] hover:text-blue-600 dark:hover:text-blue-400"
+                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] hover:text-blue-600 dark:hover:text-blue-400"
                       >
                         The Challenge
                       </a>
@@ -161,7 +161,7 @@ export default function MarketingOptimizationProject() {
                     <li>
                       <a
                         href="#marketing-strategy"
-                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(0.25_0.01_256.848)] hover:text-blue-600 dark:hover:text-blue-400"
+                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] hover:text-blue-600 dark:hover:text-blue-400"
                       >
                         Marketing Strategy
                       </a>
@@ -169,7 +169,7 @@ export default function MarketingOptimizationProject() {
                     <li>
                       <a
                         href="#synthesising"
-                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(0.25_0.01_256.848)] hover:text-blue-600 dark:hover:text-blue-400"
+                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] hover:text-blue-600 dark:hover:text-blue-400"
                       >
                         Synthesising and Designing
                       </a>
@@ -177,7 +177,7 @@ export default function MarketingOptimizationProject() {
                     <li>
                       <a
                         href="#ab-testing"
-                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(0.25_0.01_256.848)] hover:text-blue-600 dark:hover:text-blue-400"
+                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] hover:text-blue-600 dark:hover:text-blue-400"
                       >
                         Mitigating risk with A/B tests
                       </a>
@@ -185,7 +185,7 @@ export default function MarketingOptimizationProject() {
                     <li>
                       <a
                         href="#results"
-                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(0.25_0.01_256.848)] hover:text-blue-600 dark:hover:text-blue-400"
+                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] hover:text-blue-600 dark:hover:text-blue-400"
                       >
                         Results
                       </a>
@@ -193,7 +193,7 @@ export default function MarketingOptimizationProject() {
                     <li>
                       <a
                         href="#learnings"
-                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(0.25_0.01_256.848)] hover:text-blue-600 dark:hover:text-blue-400"
+                        className="block py-2 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] hover:text-blue-600 dark:hover:text-blue-400"
                       >
                         Learnings
                       </a>
@@ -248,7 +248,7 @@ export default function MarketingOptimizationProject() {
                   </p>
                 </div>
 
-                <div className="my-12 py-6 px-8 border-l-4 bg-gray-50 dark:bg-gray-800/30 border-gray-300 dark:border-gray-600">
+                <div className="my-12 py-6 px-8 border-l-4 bg-gray-50 dark:bg-[oklch(26.9%_0_0)]/30 border-gray-300 dark:border-gray-600">
                   <p className="text-xl text-gray-700 dark:text-gray-300 font-bold">
                     <span className="font-['Georgia'] mr-2 text-gray-800 dark:text-gray-200">"</span>
                     How do we get them to convert?

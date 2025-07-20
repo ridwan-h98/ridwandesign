@@ -208,7 +208,7 @@ function TableOfContents() {
 
   return (
     <div className="sticky top-24">
-      <div className="bg-gray-50 p-8 rounded-2xl">
+      <div className="bg-gray-50 p-8 rounded-2xl dark:bg-[oklch(26.9%_0_0)]">
         <h3 className="text-xl font-bold text-gray-900 mb-6">Table of Contents</h3>
         <nav>
           <ul className="space-y-3">

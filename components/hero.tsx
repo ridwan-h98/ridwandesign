@@ -52,28 +52,16 @@ export default function Hero() {
   return (
     <section className="relative pt-36 pb-16 md:pt-64 md:pb-52 overflow-hidden font-helvetica border-b border-gray-100 dark:border-white/20 bg-white dark:bg-[oklch(0.2_0.01_256.848)]">
       {/* Background elements */}
-      {/* Enhanced background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 dark:from-[oklch(0.2_0.01_256.848)] dark:via-[oklch(0.18_0.02_250)] dark:to-[oklch(0.16_0.03_245)]"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute top-1/2 -left-32 w-64 h-64 bg-gradient-to-br from-violet-400/15 to-purple-500/15 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        ></div>
-        <div
-          className="absolute bottom-20 right-1/4 w-72 h-72 bg-gradient-to-br from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
+        <div className="absolute inset-0 bg-white dark:bg-[oklch(26.9%_0_0)]"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-20">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Content */}
           <div
             ref={badgeRef}
-            className="inline-flex items-center gap-2 px-5 py-2 mb-8 bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-blue-600 dark:to-indigo-800 rounded-full text-white text-sm font-medium shadow-sm transition-all duration-700"
+            className="inline-flex items-center gap-2 px-5 py-2 mb-8 bg-gradient-to-r from-emerald-600/80 to-green-700/80 dark:from-emerald-700/70 dark:to-green-800/70 rounded-full text-white text-sm font-medium shadow-sm transition-all duration-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,19 +81,17 @@ export default function Hero() {
             Product Design
           </div>
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8 md:mb-10">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.85] mb-12 md:mb-16">
             <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-gray-200 bg-clip-text text-transparent">
               Crafting{" "}
             </span>
-            <span className="font-instrument-serif font-normal italic bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 dark:from-blue-400 dark:via-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">
-              meaningful
-            </span>{" "}
+            <span className="font-instrument-serif font-normal italic text-gray-900 dark:text-white">meaningful</span>{" "}
             <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-gray-200 bg-clip-text text-transparent">
               experiences
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-8 md:mb-10">
+          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed">
             I design intuitive and impactful digital products that solve real user problems and deliver meaningful
             experiences.
           </p>

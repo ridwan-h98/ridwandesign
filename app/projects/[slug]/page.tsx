@@ -53,7 +53,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white dark:bg-[oklch(26.9%_0_0)]">
       {/* Hero section */}
       <div className="relative h-[60vh] bg-gray-900 overflow-hidden">
         <Image

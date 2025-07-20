@@ -34,7 +34,7 @@ export default function Footer() {
     <footer
       ref={footerRef}
       id="contact"
-      className="bg-white dark:bg-[oklch(0.16_0.01_256.848)] py-12 animate-on-scroll font-helvetica"
+      className="bg-white dark:bg-[oklch(26.9%_0_0)] py-12 animate-on-scroll font-helvetica"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start">

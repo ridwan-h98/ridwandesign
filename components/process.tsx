@@ -73,8 +73,9 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-[oklch(0.2_0.01_256.848)] border-b border-gray-100 dark:border-white/20"
+      className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-[oklch(26.9%_0_0)] border-b border-gray-100 dark:border-white/20"
     >
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-gray-700" />
       {/* Add decorative blur elements similar to hero section */}
       <div className="absolute -top-20 -right-20 w-96 h-96 bg-primary-100 dark:bg-blue-900/20 rounded-full opacity-30 blur-3xl"></div>
       <div className="absolute bottom-40 -left-20 w-72 h-72 bg-primary-100 dark:bg-blue-900/20 rounded-full opacity-20 blur-3xl"></div>

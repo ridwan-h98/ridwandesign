@@ -69,7 +69,7 @@ export default function AboutMe() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-32 bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-[oklch(0.2_0.01_256.848)] dark:via-[oklch(0.19_0.01_256.848)] dark:to-[oklch(0.2_0.01_256.848)] font-helvetica border-b border-gray-100 dark:border-white/20"
+      className="py-16 md:py-32 bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-[oklch(26.9%_0_0)] dark:via-[oklch(26.9%_0_0)] dark:to-[oklch(26.9%_0_0)] font-helvetica border-b border-gray-100 dark:border-white/20"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
@@ -77,7 +77,7 @@ export default function AboutMe() {
           <div ref={(el) => (elementsRef.current[1] = el)} className="animate-on-scroll order-2 md:order-1">
             {/* Nest everything in a single card */}
             <div
-              className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="bg-white dark:bg-[oklch(26.9%_0_0)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
               style={{
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
               }}
@@ -273,7 +273,7 @@ export default function AboutMe() {
             {/* Mentoring Section - Now placed outside the main card */}
             <div className="mt-8">
               <div
-                className="bg-white dark:bg-[oklch(0.22_0.01_256.848)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
+                className="bg-white dark:bg-[oklch(26.9%_0_0)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
                 style={{
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}

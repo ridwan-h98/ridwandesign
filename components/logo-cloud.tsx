@@ -33,7 +33,7 @@ export default function LogoCloud() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-white via-gray-50/50 to-white dark:from-[oklch(0.2_0.01_256.848)] dark:via-[oklch(0.19_0.01_256.848)] dark:to-[oklch(0.2_0.01_256.848)] animate-on-scroll font-helvetica border-b border-gray-100 dark:border-white/20"
+      className="py-20 bg-gradient-to-b from-white via-gray-50/50 to-white dark:from-[oklch(26.9%_0_0)] dark:via-[oklch(26.9%_0_0)] dark:to-[oklch(26.9%_0_0)] animate-on-scroll font-helvetica border-b border-gray-100 dark:border-white/20"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">

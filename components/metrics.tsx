@@ -75,7 +75,7 @@ export default function Metrics() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-32 border-b border-gray-100 dark:border-white/20 font-helvetica bg-white dark:bg-gray-900 overflow-hidden"
+      className="py-24 md:py-32 border-b border-gray-100 dark:border-white/20 font-helvetica bg-white dark:bg-[oklch(26.9%_0_0)] overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -108,7 +108,7 @@ export default function Metrics() {
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="group relative bg-white/90 dark:bg-gray-800 p-8 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03]"
+              className="group relative bg-white/90 dark:bg-gray-700 p-8 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03]"
               style={{
                 boxShadow:
                   "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",

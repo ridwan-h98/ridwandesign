@@ -10,7 +10,7 @@ import reportWebVitals from "@/lib/web-vitals"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white dark:bg-[oklch(26.9%_0_0)]">
       <Navbar />
       <Hero />
       <LogoCloud />
