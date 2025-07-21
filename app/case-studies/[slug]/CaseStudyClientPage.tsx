@@ -86,41 +86,41 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
     // Create the enhanced team makeup HTML
     const teamMakeupHTML = `
 <div class="my-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div class="bg-[#0070AD]/5 dark:bg-[oklch(26.9%_0_0)]/10 rounded-xl p-6 border border-[#0070AD]/10 dark:border-[#0070AD]/15 shadow-sm">
+  <div class="bg-[#0070AD]/5 dark:bg-gray-900 rounded-xl p-6 border border-[#0070AD]/10 dark:border-gray-700 shadow-sm">
     <div class="flex items-start mb-4">
-      <span class="px-2.5 py-1 text-xs font-medium bg-[#0070AD]/10 dark:bg-[oklch(26.9%_0_0)]/15 text-[#0070AD] dark:text-[#12ABDB] rounded border border-[#0070AD]/10 dark:border-[#0070AD]/20">
+      <span class="px-2.5 py-1 text-xs font-medium bg-[#0070AD]/10 dark:bg-gray-700 text-[#0070AD] dark:text-[#12ABDB] rounded border border-[#0070AD]/10 dark:border-gray-600">
         Capgemini Invent
       </span>
     </div>
     <div class="space-y-3">
-      <div class="bg-white dark:bg-[oklch(26.9%_0_0)]/80 p-4 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex items-center">
-        <div class="w-8 h-8 bg-[#12ABDB]/15 dark:bg-[#12ABDB]/20 rounded-full flex items-center justify-center mr-3">
+      <div class="bg-white dark:bg-gray-800/80 p-4 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex items-center">
+        <div class="w-8 h-8 bg-[#12ABDB]/15 dark:bg-gray-700 rounded-full flex items-center justify-center mr-3">
           <span class="text-[#0070AD] dark:text-[#12ABDB] font-bold text-sm">3</span>
         </div>
         <p class="font-medium text-gray-900 dark:text-gray-100">Service Designers</p>
       </div>
-      <div class="bg-white dark:bg-[oklch(26.9%_0_0)]/80 p-4 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex items-center">
-        <div class="w-8 h-8 bg-[#12ABDB]/15 dark:bg-[#12ABDB]/20 rounded-full flex items-center justify-center mr-3">
+      <div class="bg-white dark:bg-gray-800/80 p-4 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex items-center">
+        <div class="w-8 h-8 bg-[#12ABDB]/15 dark:bg-gray-700 rounded-full flex items-center justify-center mr-3">
           <span class="text-[#0070AD] dark:text-[#12ABDB] font-bold text-sm">1</span>
         </div>
         <p class="font-medium text-gray-900 dark:text-gray-100">Automation Consultant</p>
       </div>
-      <div class="bg-white dark:bg-[oklch(26.9%_0_0)]/80 p-4 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex items-center">
-        <div class="w-8 h-8 bg-[#12ABDB]/15 dark:bg-[#12ABDB]/20 rounded-full flex items-center justify-center mr-3">
+      <div class="bg-white dark:bg-gray-800/80 p-4 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex items-center">
+        <div class="w-8 h-8 bg-[#12ABDB]/15 dark:bg-gray-700 rounded-full flex items-center justify-center mr-3">
           <span class="text-[#0070AD] dark:text-[#12ABDB] font-bold text-sm">1</span>
         </div>
         <p class="font-medium text-gray-900 dark:text-gray-100">Agile Coach</p>
       </div>
     </div>
   </div>
-  <div class="bg-[#012F63]/5 dark:bg-[oklch(26.9%_0_0)]/10 rounded-xl p-6 border border-[#012F63]/10 dark:border-[#012F63]/15 shadow-sm flex flex-col">
+  <div class="bg-[#012F63]/5 dark:bg-gray-900 rounded-xl p-6 border border-[#012F63]/10 dark:border-gray-700 shadow-sm flex flex-col">
     <div class="flex items-start mb-4">
-      <span class="px-2.5 py-1 text-xs font-medium bg-[#012F63]/10 dark:bg-[oklch(26.9%_0_0)]/15 text-[#012F63] dark:text-[#4A7CB1] rounded border border-[#012F63]/10 dark:border-[#012F63]/20">
+      <span class="px-2.5 py-1 text-xs font-medium bg-[#012F63]/10 dark:bg-gray-700 text-[#012F63] dark:text-[#4A7CB1] rounded border border-[#012F63]/10 dark:border-gray-600">
         National Highways
       </span>
     </div>
-    <div class="bg-white dark:bg-[oklch(26.9%_0_0)]/80 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex-1 flex flex-col justify-center items-center p-4">
-      <div class="w-12 h-12 bg-[#012F63]/15 dark:bg-[#012F63]/20 rounded-full flex items-center justify-center mb-2">
+    <div class="bg-white dark:bg-gray-800/80 rounded-lg shadow-sm border border-gray-100/80 dark:border-gray-700/50 flex-1 flex flex-col justify-center items-center p-4">
+      <div class="w-12 h-12 bg-[#012F63]/15 dark:bg-gray-700 rounded-full flex items-center justify-center mb-2">
         <span class="text-[#012F63] dark:text-[#4A7CB1] text-lg font-bold">10</span>
       </div>
       <p class="font-medium text-gray-900 dark:text-gray-100 text-center">Team members with varying levels of UX experience</p>
@@ -221,7 +221,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
             <div>
               <Link
                 href="/#projects"
-                className="inline-flex items-center bg-white/90 dark:bg-[oklch(0.25_0.01_256.848)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[oklch(0.28_0.01_256.848)] transition-all duration-300 mb-8"
+                className="inline-flex items-center bg-white/90 dark:bg-[oklch(26.9%_0_0)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] transition-all duration-300 mb-8"
               >
                 <ArrowLeft className="h-3.5 w-3.5 mr-2" />
                 Back to Projects
@@ -239,18 +239,18 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
               {/* Project details with badges */}
               <div className="flex flex-wrap gap-3 mb-6">
                 {caseStudy.tags && caseStudy.tags.includes("Thought Piece") ? (
-                  <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(0.25_0.01_256.848)] rounded-md border border-gray-200 dark:border-white/20">
+                  <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                     <span className="text-sm font-medium text-gray-900 dark:text-gray-100">Thought Piece</span>
                   </div>
                 ) : (
                   <>
-                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(0.25_0.01_256.848)] rounded-md border border-gray-200 dark:border-white/20">
+                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                       <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Client:</span>
                       <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         {caseStudy.client || "Various"}
                       </span>
                     </div>
-                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(0.25_0.01_256.848)] rounded-md border border-gray-200 dark:border-white/20">
+                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                       <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Role:</span>
                       <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         {caseStudy.role || "UX Designer"}
@@ -267,6 +267,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
                 src={
                   caseStudy.image ||
                   "/placeholder.svg?height=600&width=1200&text=Case+Study:+" + encodeURIComponent(caseStudy.title) ||
+                  "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||

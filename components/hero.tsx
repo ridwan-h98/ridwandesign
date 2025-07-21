@@ -50,7 +50,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative pt-36 pb-16 md:pt-64 md:pb-52 overflow-hidden font-helvetica border-b border-gray-100 dark:border-white/20 bg-white dark:bg-[oklch(0.2_0.01_256.848)]">
+    <section className="relative pt-24 pb-16 md:pt-48 md:pb-52 overflow-hidden font-helvetica border-b border-gray-100 dark:border-white/20 bg-white dark:bg-[oklch(0.2_0.01_256.848)]">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-white dark:bg-[oklch(26.9%_0_0)]"></div>
