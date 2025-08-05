@@ -74,11 +74,30 @@ Using the prioritised solutions from the workshop, we created low-fidelity wiref
 
 After internal reviews, we developed medium-fidelity prototypes for user testing, continuously refining our approach based on feedback from the cross-functional team.
 
-### 4. User Testing & Iteration
+### 4. Design Iterations
+
+Through multiple design iterations, we refined the interface to address the core user needs identified in our research. The evolution of our design shows how we progressively simplified complex workflows while maintaining functionality.
+
+![User Search Interface](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/User%20Search-HDhNefraAxZBHj69fngMuXLuYgTpmB.png)
+*Early iteration showing the search functionality and staff availability view*
+
+Our first major iteration focused on creating a clean, searchable interface that allowed managers to quickly find available staff for specific dates. The right panel provided detailed information about staff availability, while the main roster grid showed team assignments with a demand analysis chart below.
+
+![Context Menu Functionality](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dropdown-PO9sLsbKSbBLo5h3SGp4mzSuFFx8Fu.png)
+*Iteration showing context-sensitive actions through right-click functionality*
+
+We then introduced context-sensitive actions through right-click menus, allowing managers to quickly perform common tasks like changing shifts, booking time off, or managing absences directly from the roster grid. This significantly reduced the number of clicks required for routine operations.
+
+![Final Team View](https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Team%20View-28V5K8OMUHZET1x7AluRMtpct37WmV.png)
+*Refined interface with improved color coding and visual hierarchy*
+
+The final iteration featured improved color coding to distinguish between different shift types and roles (Team Manager shifts in blue, Traffic Officer shifts in yellow), enhanced visual hierarchy, and more detailed demand analysis. This version successfully addressed the "too many clicks" problem while providing clear visual feedback about roster status.
+
+### 5. User Testing & Iteration
 
 We conducted three rounds of user testing with both managers and staff members, iterating on the design after each session. This helped us refine the user flow and address usability issues early.
 
-### 5. Visual Design
+### 6. Visual Design
 
 The final visual design focused on clarity and efficiency, with:
 - Clean, uncluttered interfaces
