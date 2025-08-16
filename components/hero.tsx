@@ -3,6 +3,7 @@
 import type React from "react"
 import { useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export default function Hero() {
   const elementsRef = useRef<(HTMLDivElement | null)[]>([null])
@@ -50,66 +51,82 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative pt-24 pb-16 md:pt-48 md:pb-52 overflow-hidden font-helvetica border-b border-gray-100 dark:border-white/20 bg-white dark:bg-[oklch(0.2_0.01_256.848)]">
+    <section className="relative pt-32 pb-24 md:pt-56 md:pb-32 overflow-hidden font-helvetica bg-white dark:bg-[oklch(26.9%_0_0)]">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-white dark:bg-[oklch(26.9%_0_0)]"></div>
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/30 dark:to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-20">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
           {/* Content */}
           <div
             ref={badgeRef}
-            className="inline-flex items-center gap-2 px-5 py-2 mb-8 bg-gradient-to-r from-emerald-600/80 to-green-700/80 dark:from-emerald-700/70 dark:to-green-800/70 rounded-full text-white text-sm font-medium shadow-sm transition-all duration-700"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-12 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-semibold shadow-lg transition-all duration-700"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-4 h-4"
-            >
-              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-              <path d="M2 2l7.586 7.586"></path>
-              <circle cx="11" cy="11" r="2"></circle>
-            </svg>
-            Product Design
+            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            Available for new projects
           </div>
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.85] mb-12 md:mb-16">
-            <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-gray-200 bg-clip-text text-transparent">
-              Crafting{" "}
-            </span>
-            <span className="font-instrument-serif font-normal italic text-gray-900 dark:text-white">meaningful</span>{" "}
-            <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-white dark:via-gray-100 dark:to-gray-200 bg-clip-text text-transparent">
-              experiences
+          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-[0.9] mb-8 md:mb-12">
+            <span className="block text-gray-900 dark:text-white">Design that drives</span>
+            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
+              real impact
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-12 md:mb-16 max-w-2xl mx-auto leading-relaxed">
-            I design intuitive and impactful digital products that solve real user problems and deliver meaningful
-            experiences.
-          </p>
+          <div className="max-w-3xl mb-16 md:mb-20">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+              I partner with forward-thinking teams to create digital experiences that solve complex problems and
+              deliver measurable results.
+            </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mb-6 md:mb-16 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 mb-16">
             <button
               onClick={scrollToProjects}
-              className="bg-gradient-to-b from-black to-gray-800 dark:from-white dark:to-gray-200 text-white dark:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium hover:from-gray-900 hover:to-black dark:hover:from-gray-100 dark:hover:to-white transition-all duration-300 text-center flex items-center justify-center"
+              className="group bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 flex items-center justify-center text-lg shadow-lg"
             >
-              See My Work
-              <ArrowRight className="ml-2 h-5 w-5" />
+              View My Work
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             <a
               href="mailto:ridwanulhoque98@gmail.com"
-              className="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 text-center"
+              className="bg-transparent text-gray-900 dark:text-white border-2 border-gray-900 dark:border-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 text-center text-lg"
             >
-              Get in Touch
+              Let's Talk
             </a>
+          </div>
+
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-700 to-transparent mb-16"></div>
+
+          <div className="mb-20">
+            <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-8 uppercase tracking-wider">
+              Trusted by leading organizations
+            </p>
+            <div className="flex flex-wrap items-center justify-start gap-8 md:gap-12 opacity-60 dark:opacity-50">
+              {[
+                { name: "Home Office", src: "/images/home-office-logo.svg" },
+                { name: "National Highways", src: "/images/national-highways-logo.svg" },
+                { name: "Capgemini Invent", src: "/images/capgemini-invent-logo.svg" },
+                { name: "Eucalyptus", src: "/images/eucalyptus-logo.svg" },
+                { name: "Lab3", src: "/images/lab3-logo.svg" },
+                { name: "WTW", src: "/images/wtw-logo.svg" },
+              ].map((logo) => (
+                <div key={logo.name} className="flex items-center justify-center h-5">
+                  <Image
+                    src={logo.src || "/placeholder.svg"}
+                    alt={`${logo.name} logo`}
+                    width={80}
+                    height={20}
+                    className="max-h-5 w-auto object-contain dark:brightness-0 dark:invert grayscale hover:grayscale-0 transition-all duration-300"
+                    unoptimized
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

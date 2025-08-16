@@ -172,8 +172,22 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-16 md:py-32 bg-white dark:bg-[oklch(26.9%_0_0)] font-helvetica">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 md:py-32 bg-white dark:bg-[oklch(26.9%_0_0)] font-helvetica">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-6xl mx-auto mb-20 md:mb-24">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.9] mb-6">
+            <span className="block text-gray-900 dark:text-white">Selected</span>
+            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
+              work
+            </span>
+          </h2>
+          <div className="max-w-2xl">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+              Case studies showcasing design solutions that drive measurable business impact.
+            </p>
+          </div>
+        </div>
+
         {isLoading ? (
           <div className="flex justify-center items-center py-20">
             <div className="animate-pulse space-y-8 w-full max-w-4xl">
@@ -183,17 +197,16 @@ export default function Projects() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-16 lg:gap-y-20 items-stretch">
-            {allProjects.map((project, index) => (
-              <div
-                key={project.slug}
-                ref={(el) => (elementsRef.current[index] = el)}
-                className="animate-on-scroll group flex flex-col h-full"
-              >
-                {/* Main Image at the top */}
-                <div className="w-full mb-6 md:mb-8">
-                  <div className="bg-white dark:bg-[oklch(20.5%_0_0)] rounded-lg overflow-hidden shadow-sm border border-gray-200/50 dark:border-white/10 group-hover:shadow-md group-hover:border-gray-300/50 dark:group-hover:border-white/20 transition-all duration-300">
-                    <div className="relative h-64 md:h-80 lg:h-96 w-full">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-24 lg:gap-y-28 items-start">
+              {allProjects.map((project, index) => (
+                <div
+                  key={project.slug}
+                  ref={(el) => (elementsRef.current[index] = el)}
+                  className="animate-on-scroll group flex flex-col h-full"
+                >
+                  <div className="relative mb-8 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <div className="aspect-[4/3] w-full">
                       <Image
                         src={
                           project.slug === "building-teams"
@@ -202,36 +215,33 @@ export default function Projects() {
                         }
                         alt={project.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
                   </div>
-                </div>
 
-                {/* Project Header (content) */}
-                <div className="flex flex-col flex-grow">
-                  <div className="text-xs font-semibold bg-green-100 dark:bg-green-900/50 text-green-900 dark:text-green-200 px-2 py-1 rounded-full w-fit mb-2">
-                    {project.year || "N/A"}
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-xs font-semibold">
+                      {project.year || "N/A"}
+                    </div>
+
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
+
+                    <Link
+                      href={`/case-studies/${project.slug}`}
+                      className="group/link inline-flex items-center gap-3 bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 text-sm shadow-lg mt-6"
+                    >
+                      View Case Study
+                      <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+                    </Link>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-green-700 dark:group-hover:text-green-500 transition-colors duration-300">
-                    {project.client && (
-                      <span className="text-gray-500 dark:text-gray-400 font-normal">{project.client} • </span>
-                    )}
-                    {project.title}
-                  </h3>
-                  <p className="text-base text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <Link
-                    href={`/case-studies/${project.slug}`}
-                    className="inline-flex items-center gap-2 text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium transition-colors duration-200 text-sm mt-auto"
-                  >
-                    VIEW CASE STUDY
-                    <ArrowRight className="h-3 w-3" />
-                  </Link>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
       </div>

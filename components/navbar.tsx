@@ -40,7 +40,7 @@ export default function Navbar() {
     <>
       {/* Main static Navbar */}
       <div className="relative w-full z-30 bg-white dark:bg-[oklch(26.9%_0_0)]">
-        <div className="flex justify-between items-center container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex justify-between items-center container mx-auto px-6 sm:px-8 lg:px-12 py-8">
           {/* Logo on the left */}
           <div className="flex-shrink-0">
             <Link
@@ -107,7 +107,7 @@ export default function Navbar() {
           <div className="h-full flex flex-col">
             {/* Header with close button */}
             <div className="border-b border-gray-100 dark:border-white/20 py-5">
-              <div className="container mx-auto px-4 flex justify-between items-center">
+              <div className="container mx-auto px-6 sm:px-8 lg:px-12 flex justify-between items-center">
                 <Link
                   href="/"
                   className="text-base font-medium text-gray-900 dark:text-gray-100"
@@ -125,7 +125,7 @@ export default function Navbar() {
             </div>
 
             {/* Menu items */}
-            <div className="flex-1 flex flex-col justify-center px-4">
+            <div className="flex-1 flex flex-col justify-center px-6 sm:px-8 lg:px-12">
               <div className="space-y-8 text-center">
                 <a
                   href="https://www.linkedin.com/in/ridwanhoque/"
@@ -154,7 +154,7 @@ export default function Navbar() {
             </div>
 
             {/* Footer */}
-            <div className="border-t border-gray-100 dark:border-white/20 py-6 px-4 text-center">
+            <div className="border-t border-gray-100 dark:border-white/20 py-6 px-6 sm:px-8 lg:px-12 text-center">
               <p className="text-sm text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Ridwan</p>
             </div>
           </div>

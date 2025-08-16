@@ -19,6 +19,16 @@ export default function AboutMe() {
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
   }
+  
+  @keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  @keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-2px); }
+  }
 `
 
   useEffect(() => {
@@ -69,15 +79,14 @@ export default function AboutMe() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-32 bg-gradient-to-b from-white via-gray-50/30 to-white dark:from-[oklch(26.9%_0_0)] dark:via-[oklch(26.9%_0_0)] dark:to-[oklch(26.9%_0_0)] font-helvetica border-b border-gray-100 dark:border-white/20"
+      className="py-16 md:py-32 bg-white dark:bg-[oklch(26.9%_0_0)] font-helvetica border-b border-gray-100 dark:border-white/20"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
-          {/* Left column - About text and experience (moved from right) */}
+          {/* Left column - About text and experience */}
           <div ref={(el) => (elementsRef.current[1] = el)} className="animate-on-scroll order-2 md:order-1">
-            {/* Nest everything in a single card */}
             <div
-              className="bg-white dark:bg-[oklch(26.9%_0_0)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="bg-white dark:bg-gray-800/30 rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
               style={{
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
               }}
@@ -90,27 +99,33 @@ export default function AboutMe() {
               }}
             >
               <div className="p-8 md:p-10">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-                  <span className="font-instrument-serif font-normal italic">Lil'</span>about me
-                </h3>
+                <div className="mb-6">
+                  <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight leading-[0.9]">
+                    Lil'bout{" "}
+                    <span className="bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
+                      me
+                    </span>
+                  </h3>
+                </div>
+
                 <div className="prose prose-lg dark:prose-invert max-w-none">
-                  <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                    I blend computer science background with creative design thinking to craft user-centered
-                    experiences. My career spans startups and government sectors, working on projects ranging from rapid
-                    prototypes to enterprise solutions. This diverse experience allows me to bridge technical and design
-                    perspectives effectively.
+                  <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                    I transform complex business challenges into intuitive user experiences. With a computer science
+                    foundation and design expertise, I bridge technical constraints with user needs to deliver
+                    measurable results.
                   </p>
 
-                  {/* Add divider here */}
                   <div className="w-full h-px bg-gray-200 dark:bg-white/20 my-8"></div>
 
                   {/* Work section */}
                   <div className="mt-8">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-8">Work</h3>
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Experience</h3>
+                    </div>
 
-                    <div className="space-y-16">
+                    <div className="space-y-8">
                       <div className="flex items-start flex-col sm:flex-row">
-                        <div className="flex-shrink-0 w-12 h-12 bg-[#2B0A3D] dark:bg-[#2B0A3D] rounded-full flex items-center justify-center mr-4 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+                        <div className="flex-shrink-0 w-12 h-12 bg-[#2B0A3D] dark:bg-[#2B0A3D] rounded-full flex items-center justify-center mr-4 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-md">
                           <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
                             <svg
                               width="415"
@@ -151,7 +166,7 @@ export default function AboutMe() {
                       </div>
 
                       <div className="flex items-start flex-col sm:flex-row">
-                        <div className="flex-shrink-0 w-12 h-12 bg-gray-100 dark:bg-gray-100 rounded-full flex items-center justify-center mr-4 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+                        <div className="flex-shrink-0 w-12 h-12 bg-gray-100 dark:bg-gray-100 rounded-full flex items-center justify-center mr-4 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-md">
                           <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
                             <svg
                               width="415"
@@ -203,7 +218,7 @@ export default function AboutMe() {
                       </div>
 
                       <div className="flex items-start flex-col sm:flex-row">
-                        <div className="flex-shrink-0 w-12 h-12 bg-[#00AA53] dark:bg-[#00AA53] rounded-full flex items-center justify-center mr-4 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+                        <div className="flex-shrink-0 w-12 h-12 bg-[#00AA53] dark:bg-[#00AA53] rounded-full flex items-center justify-center mr-4 shadow-sm border border-gray-100 dark:border-white/10 overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-md">
                           <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
                             <svg
                               width="415"
@@ -241,39 +256,39 @@ export default function AboutMe() {
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div className="mt-16">
-                      <a
-                        href="https://docs.google.com/document/d/1-wRVz-llb5nGAWiu1UPl7-VWqBf_VL8gwN9wM1sEEDQ/edit?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-full py-3 px-4 bg-gray-100 dark:bg-gray-800/60 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-200 rounded-lg transition-colors duration-300 font-medium text-sm no-underline"
+                  <div className="mt-12">
+                    <a
+                      href="https://docs.google.com/document/d/1-wRVz-llb5nGAWiu1UPl7-VWqBf_VL8gwN9wM1sEEDQ/edit?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-8 py-4 bg-gray-900 dark:bg-white text-white dark:!text-black rounded-lg font-semibold text-base transition-all duration-300 hover:bg-gray-800 dark:hover:bg-gray-100 hover:text-white dark:hover:!text-black hover:shadow-lg hover:scale-[1.02] group no-underline"
+                    >
+                      View full CV
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
                       >
-                        View CV
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="ml-2 w-4 h-4"
-                        >
-                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                          <polyline points="15 3 21 3 21 9"></polyline>
-                          <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                      </a>
-                    </div>
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Mentoring Section - Now placed outside the main card */}
+
+            {/* Mentoring Section */}
             <div className="mt-8">
               <div
-                className="bg-white dark:bg-[oklch(26.9%_0_0)] rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
+                className="bg-white dark:bg-gray-800/30 rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
                 style={{
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}
@@ -286,7 +301,7 @@ export default function AboutMe() {
                 }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mr-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mr-4 group transition-all duration-300 hover:bg-green-100 dark:hover:bg-green-800/50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -295,26 +310,25 @@ export default function AboutMe() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="w-5 h-5 text-blue-600 dark:text-blue-300"
+                      className="w-6 h-6 text-blue-600 dark:text-blue-300 transition-all duration-300 group-hover:text-green-600 dark:group-hover:text-green-400"
+                      style={{ animation: "iconFloat 4s ease-in-out infinite" }}
                     >
-                      <path d="M12 20h9"></path>
-                      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
                     </svg>
                   </div>
-                  <h4 className="font-bold text-gray-900 dark:text-gray-100 text-lg">UX Design Mentor</h4>
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100 text-xl">Design Mentorship</h4>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-5">
-                  I'm passionate about helping junior and graduate designers grow in their careers. I offer mentoring
-                  sessions through ADPList where I provide guidance on portfolio development, career advice, and UX best
-                  practices.
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                  I help emerging designers accelerate their careers through 1:1 mentorship. Portfolio reviews, career
+                  guidance, and practical UX advice.
                 </p>
                 <a
                   href="https://adplist.org/mentors/ridwan-hoque"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center py-3 px-4 bg-gray-100 dark:bg-gray-800/60 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-200 rounded-lg transition-colors duration-300 font-medium text-sm no-underline"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gray-900 dark:bg-white text-white dark:!text-black rounded-lg font-semibold text-base transition-all duration-300 hover:bg-gray-800 dark:hover:bg-gray-100 hover:text-white dark:hover:!text-black hover:shadow-lg hover:scale-[1.02] group no-underline"
                 >
-                  Book a mentoring session
+                  Book a session
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -323,7 +337,7 @@ export default function AboutMe() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="ml-2 w-4 h-4"
+                    className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
                   >
                     <path d="M5 12h14"></path>
                     <path d="m12 5 7 7-7 7"></path>
@@ -333,7 +347,7 @@ export default function AboutMe() {
             </div>
           </div>
 
-          {/* Right column - Polaroid image (moved from left) */}
+          {/* Right column - Polaroid image */}
           <div
             ref={(el) => (elementsRef.current[0] = el)}
             className="animate-on-scroll flex justify-center items-center h-full order-1 md:order-2"

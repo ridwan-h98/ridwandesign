@@ -76,58 +76,52 @@ export default function Process() {
       className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-[oklch(26.9%_0_0)] border-b border-gray-100 dark:border-white/20"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-gray-700" />
-      {/* Add decorative blur elements similar to hero section */}
-      <div className="absolute -top-20 -right-20 w-96 h-96 bg-primary-100 dark:bg-blue-900/20 rounded-full opacity-30 blur-3xl"></div>
-      <div className="absolute bottom-40 -left-20 w-72 h-72 bg-primary-100 dark:bg-blue-900/20 rounded-full opacity-20 blur-3xl"></div>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div ref={sectionRef} className="text-center mb-16 animate-on-scroll">
-          <div className="inline-flex items-center gap-2 px-5 py-2 mb-6 bg-gradient-to-r from-teal-500 to-emerald-500 dark:from-teal-600 dark:to-emerald-700 rounded-full text-white text-sm font-medium shadow-sm">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-4 h-4"
-            >
-              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-              <path d="m9 12 2 2 4-4"></path>
-            </svg>
-            My Process
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 text-sm font-medium">
+            Process
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 tracking-tight">
-            How I Build Great <span className="font-instrument-serif font-normal italic">Services</span>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight leading-[0.9]">
+            How I deliver{" "}
+            <span className="bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
+              results
+            </span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            My user-centered design process ensures we create products that truly meet user needs.
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            A proven methodology that transforms complex problems into elegant solutions.
           </p>
         </div>
 
-        {/* 3 Cards Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 max-w-7xl mx-auto py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
           {/* Card 1 */}
           <div
             ref={(el) => (elementsRef.current[0] = el)}
-            className="bg-white/95 dark:bg-[oklch(0.22_0.01_256.848)] backdrop-blur-sm rounded-xl overflow-hidden border border-gray-200/60 dark:border-white/20 transform rotate-[-2deg] transition-all duration-300 hover:shadow-2xl hover:scale-[1.03] hover:rotate-[0deg] hover:border-blue-200 dark:hover:border-blue-500/30"
+            className="group relative bg-white/90 dark:bg-gray-700 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
-              transformOrigin: "center",
-              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
+              boxShadow:
+                "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
-            <div className="bg-gradient-to-br from-blue-100 via-blue-50 to-indigo-50 dark:from-[oklch(0.25_0.02_250)] dark:to-[oklch(0.28_0.03_245)] text-blue-800 dark:text-blue-100 p-8 shadow-sm">
-              <h3 className="text-2xl font-medium">What I produce</h3>
+            <div className="bg-blue-50 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100 p-10">
+              <h3 className="text-2xl font-bold">What I deliver</h3>
             </div>
             <div className="p-10">
-              <ul className="space-y-8">
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Service Design</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Product Design</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Interaction Design</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">User Research</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Design Systems</li>
+              <ul className="space-y-0">
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Service Design
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Product Design
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Interaction Design
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  User Research
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4">Design Systems</li>
               </ul>
             </div>
           </div>
@@ -135,23 +129,31 @@ export default function Process() {
           {/* Card 2 */}
           <div
             ref={(el) => (elementsRef.current[1] = el)}
-            className="bg-white/95 dark:bg-[oklch(0.22_0.01_256.848)] backdrop-blur-sm rounded-xl overflow-hidden border border-gray-200/60 dark:border-white/20 transform rotate-[1deg] transition-all duration-300 hover:shadow-2xl hover:scale-[1.03] hover:rotate-[0deg] hover:border-blue-200 dark:hover:border-blue-500/30"
+            className="group relative bg-white/90 dark:bg-gray-700 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
-              transformOrigin: "center",
-              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
+              boxShadow:
+                "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
-            <div className="bg-gradient-to-br from-amber-100 via-orange-50 to-yellow-50 dark:from-[oklch(0.25_0.02_60)] dark:to-[oklch(0.28_0.03_50)] text-amber-700 dark:text-amber-100 p-8 shadow-sm">
-              <h3 className="text-2xl font-medium">How I work</h3>
+            <div className="bg-green-50 dark:bg-green-900/30 text-green-900 dark:text-green-100 p-10">
+              <h3 className="text-2xl font-bold">How I work</h3>
             </div>
             <div className="p-10">
-              <ul className="space-y-8">
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">User-Centered Design</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Agile Methodology</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Design Thinking</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Collaborative Approach</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Iterative Process</li>
+              <ul className="space-y-0">
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  User-Centered Design
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Agile Methodology
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Design Thinking
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Collaborative Approach
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4">Iterative Process</li>
               </ul>
             </div>
           </div>
@@ -159,23 +161,31 @@ export default function Process() {
           {/* Card 3 */}
           <div
             ref={(el) => (elementsRef.current[2] = el)}
-            className="bg-white/95 dark:bg-[oklch(0.22_0.01_256.848)] backdrop-blur-sm rounded-xl overflow-hidden border border-gray-200/60 dark:border-white/20 transform rotate-[3deg] transition-all duration-300 hover:shadow-2xl hover:scale-[1.03] hover:rotate-[0deg] hover:border-blue-200 dark:hover:border-blue-500/30"
+            className="group relative bg-white/90 dark:bg-gray-700 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
-              transformOrigin: "center",
-              boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03)",
+              boxShadow:
+                "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
           >
-            <div className="bg-gradient-to-br from-sky-100 via-cyan-50 to-blue-50 dark:from-[oklch(0.25_0.02_200)] dark:to-[oklch(0.28_0.03_210)] text-sky-800 dark:text-sky-100 p-8 shadow-sm">
-              <h3 className="text-2xl font-medium">Tools I use</h3>
+            <div className="bg-purple-50 dark:bg-purple-900/30 text-purple-900 dark:text-purple-100 p-10">
+              <h3 className="text-2xl font-bold">Tools I use</h3>
             </div>
             <div className="p-10">
-              <ul className="space-y-8">
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Figma</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Adobe Creative Suite</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Sketch</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Miro</li>
-                <li className="text-lg text-gray-600 dark:text-gray-300 font-medium">Prototyping Tools</li>
+              <ul className="space-y-0">
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Figma
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Adobe Creative Suite
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Sketch
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4 border-b border-gray-200/50 dark:border-gray-600/30">
+                  Miro
+                </li>
+                <li className="text-lg text-gray-700 dark:text-gray-300 font-medium py-4">Prototyping Tools</li>
               </ul>
             </div>
           </div>

@@ -34,24 +34,29 @@ export default function Footer() {
     <footer
       ref={footerRef}
       id="contact"
-      className="bg-white dark:bg-[oklch(26.9%_0_0)] py-12 animate-on-scroll font-helvetica"
+      className="bg-white dark:bg-[oklch(26.9%_0_0)] py-16 animate-on-scroll font-helvetica"
     >
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="mb-8 md:mb-0">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Let's work <span className="font-instrument-serif font-normal italic">together</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 tracking-tight leading-[0.9]">
+              Let's build something{" "}
+              <span className="bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
+                great
+              </span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-0">Available for new projects and collaborations.</p>
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-0 font-medium">
+              Ready to transform your next project.
+            </p>
           </div>
 
           <div className="flex flex-col gap-4">
             <a
               href="mailto:ridwanulhoque98@gmail.com"
-              className="flex items-center gap-3 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 group"
+              className="flex items-center gap-4 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 group text-lg font-medium"
             >
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 transition-colors duration-300">
-                <AtSign className="h-4 w-4" />
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                <AtSign className="h-5 w-5" />
               </span>
               ridwanulhoque98@gmail.com
             </a>
@@ -60,18 +65,18 @@ export default function Footer() {
               href="https://www.linkedin.com/in/ridwanhoque/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 group"
+              className="flex items-center gap-4 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 group text-lg font-medium"
             >
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 transition-colors duration-300">
-                <ExternalLink className="h-4 w-4" />
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                <ExternalLink className="h-5 w-5" />
               </span>
               LinkedIn
             </a>
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-gray-200 dark:border-white/20">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
+        <div className="mt-16 pt-8 border-t border-gray-200 dark:border-white/20">
+          <p className="text-gray-500 dark:text-gray-400 text-base">
             © {new Date().getFullYear()} Ridwan Hoque. All rights reserved.
           </p>
         </div>
