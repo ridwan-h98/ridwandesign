@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <>
       {/* Main static Navbar */}
-      <div className="relative w-full z-30 bg-white dark:bg-[oklch(26.9%_0_0)]">
+      <div className="relative w-full z-30 bg-white dark:bg-background">
         <div className="flex justify-between items-center container mx-auto px-6 sm:px-8 lg:px-12 py-8">
           {/* Logo on the left */}
           <div className="flex-shrink-0">
@@ -98,15 +98,15 @@ export default function Navbar() {
           </div>
         </div>
         {/* Light divider at the bottom of the nav */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-100 dark:bg-white/20" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-100 dark:bg-border" />
       </div>
 
       {/* Mobile menu (full screen) */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white dark:bg-gray-900 z-40 md:hidden">
+        <div className="fixed inset-0 bg-white dark:bg-background z-40 md:hidden">
           <div className="h-full flex flex-col">
             {/* Header with close button */}
-            <div className="border-b border-gray-100 dark:border-white/20 py-5">
+            <div className="border-b border-gray-100 dark:border-border py-5">
               <div className="container mx-auto px-6 sm:px-8 lg:px-12 flex justify-between items-center">
                 <Link
                   href="/"
@@ -154,7 +154,7 @@ export default function Navbar() {
             </div>
 
             {/* Footer */}
-            <div className="border-t border-gray-100 dark:border-white/20 py-6 px-6 sm:px-8 lg:px-12 text-center">
+            <div className="border-t border-gray-100 dark:border-border py-6 px-6 sm:px-8 lg:px-12 text-center">
               <p className="text-sm text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Ridwan</p>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function Navbar() {
 
       {/* Fixed Theme Toggle */}
       <div className="fixed bottom-4 right-4 z-50">
-        <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-full border-2 border-gray-200/60 dark:border-white/20 p-2.5 shadow-lg">
+        <div className="bg-white/80 dark:bg-card/80 backdrop-blur-md rounded-full border-2 border-gray-200/60 dark:border-border p-2.5 shadow-lg">
           <ThemeToggle />
         </div>
       </div>

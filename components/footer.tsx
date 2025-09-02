@@ -31,11 +31,7 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer
-      ref={footerRef}
-      id="contact"
-      className="bg-white dark:bg-[oklch(26.9%_0_0)] py-16 animate-on-scroll font-helvetica"
-    >
+    <footer ref={footerRef} id="contact" className="bg-white dark:bg-background py-16 animate-on-scroll font-helvetica">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="mb-8 md:mb-0">
@@ -75,7 +71,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-200 dark:border-white/20">
+        <div className="mt-16 pt-8 border-t border-gray-200 dark:border-border">
           <p className="text-gray-500 dark:text-gray-400 text-base">
             © {new Date().getFullYear()} Ridwan Hoque. All rights reserved.
           </p>

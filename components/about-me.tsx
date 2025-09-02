@@ -79,14 +79,14 @@ export default function AboutMe() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-32 bg-white dark:bg-[oklch(26.9%_0_0)] font-helvetica border-b border-gray-100 dark:border-white/20"
+      className="py-16 md:py-32 bg-white dark:bg-background font-helvetica border-b border-gray-100 dark:border-border"
     >
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left column - About text and experience */}
           <div ref={(el) => (elementsRef.current[1] = el)} className="animate-on-scroll order-2 md:order-1">
             <div
-              className="bg-white dark:bg-gray-800/30 rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="bg-white dark:bg-card rounded-2xl border border-gray-100 dark:border-border shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
               style={{
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
               }}
@@ -288,7 +288,7 @@ export default function AboutMe() {
             {/* Mentoring Section */}
             <div className="mt-8">
               <div
-                className="bg-white dark:bg-gray-800/30 rounded-2xl border border-gray-100 dark:border-white/10 shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
+                className="bg-white dark:bg-card rounded-2xl border border-gray-100 dark:border-border shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
                 style={{
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}

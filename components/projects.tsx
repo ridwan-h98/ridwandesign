@@ -172,7 +172,7 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-white dark:bg-[oklch(26.9%_0_0)] font-helvetica">
+    <section id="projects" className="py-24 md:py-32 bg-white dark:bg-background font-helvetica">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="max-w-6xl mx-auto mb-20 md:mb-24">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.9] mb-6">
@@ -192,7 +192,7 @@ export default function Projects() {
           <div className="flex justify-center items-center py-20">
             <div className="animate-pulse space-y-8 w-full max-w-4xl">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="bg-gray-200 dark:bg-gray-700 h-96 rounded-lg"></div>
+                <div key={i} className="bg-gray-200 dark:bg-card h-96 rounded-lg"></div>
               ))}
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function Projects() {
                   ref={(el) => (elementsRef.current[index] = el)}
                   className="animate-on-scroll group flex flex-col h-full"
                 >
-                  <div className="relative mb-8 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                  <div className="relative mb-8 overflow-hidden rounded-lg bg-gray-100 dark:bg-card">
                     <div className="aspect-[4/3] w-full">
                       <Image
                         src={
@@ -221,7 +221,7 @@ export default function Projects() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="inline-flex items-center px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-xs font-semibold">
+                    <div className="inline-flex items-center px-3 py-1 bg-gray-200 dark:bg-secondary text-gray-800 dark:text-secondary-foreground rounded-full text-xs font-semibold">
                       {project.year || "N/A"}
                     </div>
 

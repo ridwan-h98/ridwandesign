@@ -51,12 +51,11 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative pt-32 pb-24 md:pt-56 md:pb-32 overflow-hidden font-helvetica bg-white dark:bg-[oklch(26.9%_0_0)]">
+    <section className="relative pt-20 pb-24 md:pt-40 md:pb-32 overflow-hidden font-helvetica bg-white dark:bg-background">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-white dark:bg-[oklch(26.9%_0_0)]"></div>
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/30 dark:to-transparent"></div>
+        <div className="absolute inset-0 bg-white dark:bg-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/30 dark:to-card/20"></div>
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-20">

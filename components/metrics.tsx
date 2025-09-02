@@ -87,7 +87,7 @@ export default function Metrics() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-32 border-b border-gray-100 dark:border-white/20 font-helvetica bg-white dark:bg-[oklch(26.9%_0_0)] overflow-hidden"
+      className="py-24 md:py-32 border-b border-gray-100 dark:border-border font-helvetica bg-white dark:bg-background overflow-hidden"
     >
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section header */}
@@ -114,7 +114,7 @@ export default function Metrics() {
             return (
               <div
                 key={index}
-                className="group relative bg-white/90 dark:bg-gray-700 p-8 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03]"
+                className="group relative bg-white/90 dark:bg-card p-8 rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03]"
                 style={{
                   boxShadow:
                     "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
@@ -123,7 +123,7 @@ export default function Metrics() {
               >
                 {/* Animated icon at the top of each card */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-600 mb-4 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 dark:bg-secondary mb-4 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 transition-all duration-300">
                     <IconComponent className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-all duration-300 group-hover:scale-110" />
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function Metrics() {
                 {/* Label and description */}
                 <div>
                   <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-3">{metric.label}</h3>
-                  <div className="h-px w-12 mb-4 bg-gray-200 dark:bg-gray-600"></div>
+                  <div className="h-px w-12 mb-4 bg-gray-200 dark:bg-border"></div>
                   <p className="text-gray-600 dark:text-gray-300">{metric.description}</p>
                 </div>
               </div>

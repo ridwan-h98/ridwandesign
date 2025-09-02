@@ -73,13 +73,13 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-[oklch(26.9%_0_0)] border-b border-gray-100 dark:border-white/20"
+      className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-background border-b border-gray-100 dark:border-border"
     >
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-gray-700" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-border" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div ref={sectionRef} className="text-center mb-16 animate-on-scroll">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gray-100 dark:bg-secondary rounded-full text-gray-700 dark:text-secondary-foreground text-sm font-medium">
             Process
           </div>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight leading-[0.9]">
@@ -97,7 +97,7 @@ export default function Process() {
           {/* Card 1 */}
           <div
             ref={(el) => (elementsRef.current[0] = el)}
-            className="group relative bg-white/90 dark:bg-gray-700 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
                 "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
@@ -129,7 +129,7 @@ export default function Process() {
           {/* Card 2 */}
           <div
             ref={(el) => (elementsRef.current[1] = el)}
-            className="group relative bg-white/90 dark:bg-gray-700 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
                 "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
@@ -161,7 +161,7 @@ export default function Process() {
           {/* Card 3 */}
           <div
             ref={(el) => (elementsRef.current[2] = el)}
-            className="group relative bg-white/90 dark:bg-gray-700 rounded-xl border border-gray-200/40 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
                 "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
