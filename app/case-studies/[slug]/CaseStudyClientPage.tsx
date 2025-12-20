@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import TableOfContents from "@/components/table-of-contents"
 
-export default function CaseStudyClientPage({ initialCaseStudy, params }) {
+export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
   const [caseStudy, setCaseStudy] = useState(initialCaseStudy)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -24,7 +24,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
         setLoading(true)
         setError(null)
 
-        const response = await fetch(`/api/case-studies/${params.slug}`)
+        const response = await fetch(`/api/case-studies/${slug}`)
 
         if (!response.ok) {
           throw new Error(`Failed to load case study: ${response.statusText}`)
@@ -41,7 +41,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
     }
 
     fetchCaseStudy()
-  }, [params.slug, initialCaseStudy])
+  }, [slug, initialCaseStudy])
 
   if (loading) {
     return (
@@ -209,16 +209,17 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[hsl(270,2%,5%)] font-helvetica">
+    <main className="min-h-screen bg-white dark:bg-background font-helvetica relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/5 to-transparent dark:via-card/8"></div>
+        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
+      </div>
+
       <Navbar />
 
       {/* Hero section */}
-      <div className="bg-gray-50 dark:bg-[hsl(270,2%,6%)] pt-16 border-b border-gray-100 dark:border-white/20 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-6 lg:px-8 py-16 relative z-10">
+      <div className="bg-gray-50 dark:bg-[hsl(270,2%,4%)] pt-24 border-b border-gray-100 dark:border-white/20 relative z-10">
+        <div className="container mx-auto px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column - Content */}
             <div>
@@ -296,13 +297,9 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
         </div>
       </div>
 
-      {/* Case study content */}
-      <div className="container mx-auto px-6 lg:px-8 py-16 md:py-24 relative">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/3 left-0 w-96 h-96 bg-gradient-to-br from-green-500/3 to-transparent dark:from-green-400/6 blur-3xl"></div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 relative z-10">
+      {/* Main content area */}
+      <div className="container mx-auto px-6 lg:px-8 py-16 md:py-24 bg-white dark:bg-[hsl(270,2%,6%)] relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Sidebar with Table of Contents */}
           <div className="lg:col-span-1">
             <TableOfContents headings={caseStudy.headings || []} />

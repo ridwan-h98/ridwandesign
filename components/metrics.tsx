@@ -90,10 +90,9 @@ export default function Metrics() {
       className="py-24 md:py-32 border-b border-gray-100 dark:border-border font-helvetica bg-white dark:bg-background overflow-hidden relative"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-500/4 to-transparent dark:from-emerald-400/7 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-green-500/4 to-transparent dark:from-green-400/7 blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-card/5 to-transparent dark:via-card/8"></div>
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-br from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
       </div>
-      {/* End of added gradient background */}
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         {/* Section header */}
@@ -120,7 +119,7 @@ export default function Metrics() {
             return (
               <div
                 key={index}
-                className="group relative bg-white/90 dark:bg-card p-8 rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+                className="group relative bg-white/90 dark:bg-card p-8 rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03]"
                 style={{
                   boxShadow:
                     "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",

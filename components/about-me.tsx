@@ -78,14 +78,12 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      ref={sectionRef}
       className="py-16 md:py-32 bg-white dark:bg-background font-helvetica border-b border-gray-100 dark:border-border relative overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/3 to-transparent dark:from-blue-400/6 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-green-500/3 to-transparent dark:from-green-400/6 blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/30 to-transparent dark:via-card/8"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-tl from-blue-500/5 to-transparent dark:from-blue-400/8 blur-3xl"></div>
       </div>
-      {/* </CHANGE> */}
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">

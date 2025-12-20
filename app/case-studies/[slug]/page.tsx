@@ -4,25 +4,33 @@ import CaseStudyClientPage from "./CaseStudyClientPage"
 
 export async function generateStaticParams() {
   try {
-    const paths = getAllCaseStudySlugs()
-    return paths
+    const slugs = getAllCaseStudySlugs()
+    // Return array of objects with just the slug property
+    return slugs.map((item) => ({
+      slug: item.params.slug,
+    }))
   } catch (error) {
     console.error("Error generating static params:", error)
     return []
   }
 }
 
-export default async function CaseStudyPage({ params }) {
+export default async function CaseStudyPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
   try {
-    const caseStudy = await getCaseStudyData(params.slug)
+    const { slug } = await params
+    const caseStudy = await getCaseStudyData(slug)
 
     if (!caseStudy || caseStudy.title === "Case Study Not Found") {
       notFound()
     }
 
-    return <CaseStudyClientPage initialCaseStudy={caseStudy} params={params} />
+    return <CaseStudyClientPage initialCaseStudy={caseStudy} slug={slug} />
   } catch (error) {
-    console.error(`Error loading case study ${params.slug}:`, error)
+    console.error("Error loading case study:", error)
     notFound()
   }
 }

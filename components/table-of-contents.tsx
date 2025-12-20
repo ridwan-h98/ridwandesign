@@ -36,10 +36,10 @@ export default function TableOfContents({ headings }) {
   }, [headings])
 
   return (
-    <div className="bg-white dark:bg-[hsl(270,2%,8%)] p-6 rounded-2xl sticky top-24 border border-gray-200 dark:border-white/10 shadow-sm">
+    <div className="bg-white dark:bg-[hsl(270,2%,3%)] p-6 rounded-2xl sticky top-24 border border-gray-200 dark:border-white/10 shadow-sm">
       <div className="relative z-10">
         <div className="mb-6">
-          <span className="inline-block px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-[hsl(270,2%,12%)] rounded-md border border-gray-200 dark:border-white/10">
+          <span className="inline-block px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-[hsl(270,2%,5%)] rounded-md border border-gray-200 dark:border-white/10">
             Table of Contents
           </span>
         </div>
@@ -51,7 +51,7 @@ export default function TableOfContents({ headings }) {
                   href={`#${heading.id}`}
                   className={`block py-2 px-3 rounded-lg text-sm font-medium transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 hover:transform hover:translate-x-1 ${
                     activeId === heading.id
-                      ? "bg-gray-50 dark:bg-[hsl(270,2%,12%)] text-blue-600 dark:text-blue-400"
+                      ? "bg-gray-50 dark:bg-[hsl(270,2%,5%)] text-blue-600 dark:text-blue-400"
                       : "text-gray-700 dark:text-gray-300"
                   }`}
                 >
