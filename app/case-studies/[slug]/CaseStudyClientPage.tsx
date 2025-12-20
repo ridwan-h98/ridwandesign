@@ -150,7 +150,6 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
   <li>Define clear research objectives and questions</li>
   <li>Identify specific insights we need to gather</li>
   <li>Develop tailored questions that will elicit those insights</li>
-  <li>Develop tailored questions that will elicit those insights</li>
   <li>Assign roles for each team member during the interviews</li>
 </ul>
 
@@ -210,18 +209,22 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[oklch(26.9%_0_0)] font-helvetica">
+    <main className="min-h-screen bg-white dark:bg-[hsl(270,2%,5%)] font-helvetica">
       <Navbar />
 
       {/* Hero section */}
-      <div className="bg-gray-50 dark:bg-[oklch(26.9%_0_0)] pt-24 border-b border-gray-100 dark:border-white/20">
-        <div className="container mx-auto px-6 lg:px-8 py-16">
+      <div className="bg-gray-50 dark:bg-[hsl(270,2%,6%)] pt-16 border-b border-gray-100 dark:border-white/20 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-6 lg:px-8 py-16 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column - Content */}
             <div>
               <Link
                 href="/#projects"
-                className="inline-flex items-center bg-white/90 dark:bg-[oklch(26.9%_0_0)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] transition-all duration-300 mb-8"
+                className="inline-flex items-center bg-white/90 dark:bg-[hsl(270,2%,10%)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[hsl(270,2%,12%)] transition-all duration-300 mb-8"
               >
                 <ArrowLeft className="h-3.5 w-3.5 mr-2" />
                 Back to Projects
@@ -239,18 +242,18 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
               {/* Project details with badges */}
               <div className="flex flex-wrap gap-3 mb-6">
                 {caseStudy.tags && caseStudy.tags.includes("Thought Piece") ? (
-                  <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
+                  <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[hsl(270,2%,10%)] rounded-md border border-gray-200 dark:border-white/20">
                     <span className="text-sm font-medium text-gray-900 dark:text-gray-100">Thought Piece</span>
                   </div>
                 ) : (
                   <>
-                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
+                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[hsl(270,2%,10%)] rounded-md border border-gray-200 dark:border-white/20">
                       <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Client:</span>
                       <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         {caseStudy.client || "Various"}
                       </span>
                     </div>
-                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
+                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[hsl(270,2%,10%)] rounded-md border border-gray-200 dark:border-white/20">
                       <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Role:</span>
                       <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         {caseStudy.role || "UX Designer"}
@@ -267,6 +270,9 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
                 src={
                   caseStudy.image ||
                   "/placeholder.svg?height=600&width=1200&text=Case+Study:+" + encodeURIComponent(caseStudy.title) ||
+                  "/placeholder.svg" ||
+                  "/placeholder.svg" ||
+                  "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||
@@ -291,8 +297,12 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
       </div>
 
       {/* Case study content */}
-      <div className="container mx-auto px-6 lg:px-8 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-6 lg:px-8 py-16 md:py-24 relative">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/3 left-0 w-96 h-96 bg-gradient-to-br from-green-500/3 to-transparent dark:from-green-400/6 blur-3xl"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 relative z-10">
           {/* Sidebar with Table of Contents */}
           <div className="lg:col-span-1">
             <TableOfContents headings={caseStudy.headings || []} />
@@ -491,7 +501,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, params }) {
                     caseStudy.slug === "building-teams"
                       ? enhanceTeamMakeup(caseStudy.contentHtml).replace(
                           /https:\/\/hebbkx1anhila5yf\.public\.blob\.vercel-storage\.com\/UX%20Maturity%20Scale-HjJY5UxNmn3t6kVxtRZDXbOzIqBKm3\.webp/g,
-                          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/UX%20Maturity%20Scale-pHV4GwtZnls5JBnsntaSnpSh0dxwG1.webp",
+                          "/images/ux-20maturity-20scale.webp",
                         )
                       : caseStudy.slug === "growing-juniper"
                         ? caseStudy.contentHtml

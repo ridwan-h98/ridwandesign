@@ -75,6 +75,12 @@ export default function Process() {
       id="process"
       className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-background border-b border-gray-100 dark:border-border"
     >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-500/3 to-transparent dark:from-blue-400/6 blur-3xl"></div>
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-br from-green-500/3 to-transparent dark:from-green-400/6 blur-3xl"></div>
+      </div>
+      {/* </CHANGE> */}
+
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-border" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">

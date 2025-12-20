@@ -51,11 +51,13 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative pt-20 pb-24 md:pt-40 md:pb-32 overflow-hidden font-helvetica bg-white dark:bg-background">
+    <section className="relative pt-20 pb-16 md:pt-40 md:pb-32 overflow-hidden font-helvetica bg-white dark:bg-background">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-white dark:bg-background"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/30 dark:to-card/20"></div>
+        {/* Artistic accent - subtle corner glow */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/5 to-transparent dark:from-emerald-400/10 blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-20">
@@ -99,6 +101,7 @@ export default function Hero() {
             </a>
           </div>
 
+          {/* Subtle divider with artistic gradient */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-700 to-transparent mb-16"></div>
 
           <div className="mb-20">
