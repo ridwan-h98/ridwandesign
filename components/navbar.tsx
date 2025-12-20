@@ -131,21 +131,21 @@ export default function Navbar() {
                   href="https://www.linkedin.com/in/ridwanhoque/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block py-3 text-2xl font-semibold text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
+                  className="block py-3 text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   LinkedIn
                 </a>
                 <Link
                   href="/#about"
-                  className="block py-3 text-2xl font-semibold text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
+                  className="block py-3 text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About
                 </Link>
                 <a
                   href="mailto:ridwanulhoque98@gmail.com"
-                  className="block py-3 text-2xl font-semibold text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
+                  className="block py-3 text-xl font-medium text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact

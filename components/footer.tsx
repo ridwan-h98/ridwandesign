@@ -31,17 +31,8 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer
-      ref={footerRef}
-      id="contact"
-      className="bg-white dark:bg-background py-16 animate-on-scroll font-helvetica relative overflow-hidden"
-    >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-gray-50/30 to-transparent dark:via-card/8"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-green-500/5 to-transparent dark:from-green-400/8 blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <footer ref={footerRef} id="contact" className="bg-white dark:bg-background py-16 animate-on-scroll font-helvetica">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="mb-8 md:mb-0">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 tracking-tight leading-[0.9]">

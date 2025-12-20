@@ -172,16 +172,8 @@ export default function Projects() {
   ]
 
   return (
-    <section
-      id="projects"
-      className="py-24 md:py-32 bg-white dark:bg-background font-helvetica relative overflow-hidden"
-    >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/30 dark:to-card/10"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <section id="projects" className="py-24 md:py-32 bg-white dark:bg-background font-helvetica">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="max-w-6xl mx-auto mb-20 md:mb-24">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.9] mb-6">
             <span className="block text-gray-900 dark:text-white">Selected</span>
@@ -218,7 +210,7 @@ export default function Projects() {
                       <Image
                         src={
                           project.slug === "building-teams"
-                            ? "/images/ux-20maturity-20scale.webp"
+                            ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/UX%20Maturity%20Scale-pHV4GwtZnls5JBnsntaSnpSh0dxwG1.webp"
                             : project.image || "/placeholder.svg?height=400&width=600"
                         }
                         alt={project.title}

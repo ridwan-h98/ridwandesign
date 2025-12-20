@@ -8,7 +8,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import TableOfContents from "@/components/table-of-contents"
 
-export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
+export default function CaseStudyClientPage({ initialCaseStudy, params }) {
   const [caseStudy, setCaseStudy] = useState(initialCaseStudy)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -24,7 +24,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
         setLoading(true)
         setError(null)
 
-        const response = await fetch(`/api/case-studies/${slug}`)
+        const response = await fetch(`/api/case-studies/${params.slug}`)
 
         if (!response.ok) {
           throw new Error(`Failed to load case study: ${response.statusText}`)
@@ -41,7 +41,7 @@ export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
     }
 
     fetchCaseStudy()
-  }, [slug, initialCaseStudy])
+  }, [params.slug, initialCaseStudy])
 
   if (loading) {
     return (
@@ -209,23 +209,18 @@ export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-background font-helvetica relative">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/5 to-transparent dark:via-card/8"></div>
-        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
-      </div>
-
+    <main className="min-h-screen bg-white dark:bg-[hsl(270,2%,8%)] font-helvetica">
       <Navbar />
 
       {/* Hero section */}
-      <div className="bg-gray-50 dark:bg-[hsl(270,2%,4%)] pt-24 border-b border-gray-100 dark:border-white/20 relative z-10">
+      <div className="bg-gray-50 dark:bg-[hsl(270,2%,6%)] pt-24 border-b border-gray-100 dark:border-white/20">
         <div className="container mx-auto px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left column - Content */}
             <div>
               <Link
                 href="/#projects"
-                className="inline-flex items-center bg-white/90 dark:bg-[hsl(270,2%,10%)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[hsl(270,2%,12%)] transition-all duration-300 mb-8"
+                className="inline-flex items-center bg-white/90 dark:bg-[oklch(26.9%_0_0)] text-gray-700 dark:text-gray-100 text-xs font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 shadow-sm hover:bg-gray-50 dark:hover:bg-[oklch(26.9%_0_0)] transition-all duration-300 mb-8"
               >
                 <ArrowLeft className="h-3.5 w-3.5 mr-2" />
                 Back to Projects
@@ -243,18 +238,18 @@ export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
               {/* Project details with badges */}
               <div className="flex flex-wrap gap-3 mb-6">
                 {caseStudy.tags && caseStudy.tags.includes("Thought Piece") ? (
-                  <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[hsl(270,2%,10%)] rounded-md border border-gray-200 dark:border-white/20">
+                  <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                     <span className="text-sm font-medium text-gray-900 dark:text-gray-100">Thought Piece</span>
                   </div>
                 ) : (
                   <>
-                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[hsl(270,2%,10%)] rounded-md border border-gray-200 dark:border-white/20">
+                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                       <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Client:</span>
                       <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         {caseStudy.client || "Various"}
                       </span>
                     </div>
-                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[hsl(270,2%,10%)] rounded-md border border-gray-200 dark:border-white/20">
+                    <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 dark:bg-[oklch(26.9%_0_0)] rounded-md border border-gray-200 dark:border-white/20">
                       <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mr-2">Role:</span>
                       <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                         {caseStudy.role || "UX Designer"}
@@ -271,8 +266,6 @@ export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
                 src={
                   caseStudy.image ||
                   "/placeholder.svg?height=600&width=1200&text=Case+Study:+" + encodeURIComponent(caseStudy.title) ||
-                  "/placeholder.svg" ||
-                  "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||
                   "/placeholder.svg" ||
@@ -297,8 +290,8 @@ export default function CaseStudyClientPage({ initialCaseStudy, slug }) {
         </div>
       </div>
 
-      {/* Main content area */}
-      <div className="container mx-auto px-6 lg:px-8 py-16 md:py-24 bg-white dark:bg-[hsl(270,2%,6%)] relative z-10">
+      {/* Case study content */}
+      <div className="container mx-auto px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Sidebar with Table of Contents */}
           <div className="lg:col-span-1">

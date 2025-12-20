@@ -75,11 +75,6 @@ export default function Process() {
       id="process"
       className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-background border-b border-gray-100 dark:border-border"
     >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-card/5 via-transparent to-transparent dark:from-card/10"></div>
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-bl from-green-500/5 to-transparent dark:from-green-400/8 blur-3xl"></div>
-      </div>
-
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-border" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">

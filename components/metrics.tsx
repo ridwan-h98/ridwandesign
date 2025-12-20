@@ -87,14 +87,9 @@ export default function Metrics() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-32 border-b border-gray-100 dark:border-border font-helvetica bg-white dark:bg-background overflow-hidden relative"
+      className="py-24 md:py-32 border-b border-gray-100 dark:border-border font-helvetica bg-white dark:bg-background overflow-hidden"
     >
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-card/5 to-transparent dark:via-card/8"></div>
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-br from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section header */}
         <div className="relative mb-20 max-w-xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-12 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-semibold shadow-lg">
