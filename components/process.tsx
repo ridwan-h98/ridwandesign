@@ -75,6 +75,12 @@ export default function Process() {
       id="process"
       className="py-24 md:py-32 font-helvetica relative overflow-hidden bg-white dark:bg-background border-b border-gray-100 dark:border-border"
     >
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-500/3 to-transparent dark:from-blue-400/6 blur-3xl"></div>
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-br from-green-500/3 to-transparent dark:from-green-400/6 blur-3xl"></div>
+      </div>
+      {/* </CHANGE> */}
+
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-border" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
@@ -97,11 +103,18 @@ export default function Process() {
           {/* Card 1 */}
           <div
             ref={(el) => (elementsRef.current[0] = el)}
-            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
                 "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 20px 40px -10px rgba(0, 0, 0, 0.15)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow =
+                "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)"
             }}
           >
             <div className="bg-blue-50 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100 p-10">
@@ -129,11 +142,18 @@ export default function Process() {
           {/* Card 2 */}
           <div
             ref={(el) => (elementsRef.current[1] = el)}
-            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
                 "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 20px 40px -10px rgba(0, 0, 0, 0.15)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow =
+                "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)"
             }}
           >
             <div className="bg-green-50 dark:bg-green-900/30 text-green-900 dark:text-green-100 p-10">
@@ -161,11 +181,18 @@ export default function Process() {
           {/* Card 3 */}
           <div
             ref={(el) => (elementsRef.current[2] = el)}
-            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+            className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
                 "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 20px 40px -10px rgba(0, 0, 0, 0.15)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow =
+                "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)"
             }}
           >
             <div className="bg-purple-50 dark:bg-purple-900/30 text-purple-900 dark:text-purple-100 p-10">

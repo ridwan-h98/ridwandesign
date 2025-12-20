@@ -171,7 +171,9 @@ export function getAllCaseStudySlugs() {
       .filter((fileName) => fileName.endsWith(".md"))
       .map((fileName) => {
         return {
-          slug: fileName.replace(/\.md$/, ""),
+          params: {
+            slug: fileName.replace(/\.md$/, ""),
+          },
         }
       })
   } catch (error) {

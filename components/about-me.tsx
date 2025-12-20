@@ -79,9 +79,15 @@ export default function AboutMe() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-32 bg-white dark:bg-background font-helvetica border-b border-gray-100 dark:border-border"
+      className="py-16 md:py-32 bg-white dark:bg-background font-helvetica border-b border-gray-100 dark:border-border relative overflow-hidden"
     >
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/3 to-transparent dark:from-blue-400/6 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-green-500/3 to-transparent dark:from-green-400/6 blur-3xl"></div>
+      </div>
+      {/* </CHANGE> */}
+
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left column - About text and experience */}
           <div ref={(el) => (elementsRef.current[1] = el)} className="animate-on-scroll order-2 md:order-1">
@@ -362,7 +368,7 @@ export default function AboutMe() {
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rid%20in%20the%20wild.jpg-JxcSYMzCmErrlwvXaPeToBCoRCwPA9.jpeg"
+                  src="/images/rid-20in-20the-20wild.jpeg"
                   alt="Ridwan sitting on a chair"
                   width={800}
                   height={1067}
