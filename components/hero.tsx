@@ -56,8 +56,7 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-white dark:bg-background"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/30 dark:to-card/20"></div>
-        {/* Artistic accent - subtle corner glow */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/5 to-transparent dark:from-emerald-400/10 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-transparent dark:from-emerald-400/20 blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-20">
