@@ -8,6 +8,8 @@ import Image from "next/image"
 export default function Hero() {
   const elementsRef = useRef<(HTMLDivElement | null)[]>([null])
   const badgeRef = useRef<HTMLDivElement>(null)
+  const h1Line1Ref = useRef<HTMLSpanElement>(null)
+  const h1Line2Ref = useRef<HTMLSpanElement>(null)
 
   const scrollToProjects = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -43,6 +45,31 @@ export default function Hero() {
       }, 300)
     }
 
+    if (h1Line1Ref.current && h1Line2Ref.current) {
+      h1Line1Ref.current.style.opacity = "0"
+      h1Line1Ref.current.style.transform = "translateY(30px)"
+      h1Line2Ref.current.style.opacity = "0"
+      h1Line2Ref.current.style.transform = "translateY(30px) scale(0.95)"
+
+      setTimeout(() => {
+        if (h1Line1Ref.current) {
+          h1Line1Ref.current.style.transition =
+            "opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)"
+          h1Line1Ref.current.style.opacity = "1"
+          h1Line1Ref.current.style.transform = "translateY(0)"
+        }
+      }, 500)
+
+      setTimeout(() => {
+        if (h1Line2Ref.current) {
+          h1Line2Ref.current.style.transition =
+            "opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1)"
+          h1Line2Ref.current.style.opacity = "1"
+          h1Line2Ref.current.style.transform = "translateY(0) scale(1)"
+        }
+      }, 900)
+    }
+
     return () => {
       elementsRef.current.forEach((el) => {
         if (el) observer.unobserve(el)
@@ -51,12 +78,12 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative pt-20 pb-16 md:pt-40 md:pb-32 overflow-hidden font-helvetica bg-white dark:bg-background">
-      {/* Background elements */}
+    <section className="relative pt-20 pb-20 md:pt-32 md:pb-24 overflow-hidden font-helvetica bg-white dark:bg-background">
+      {/* Background elements with animated gradient */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-white dark:bg-background"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/30 dark:to-card/20"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-transparent dark:from-emerald-400/20 blur-3xl"></div>
+        <div className="absolute inset-0 bg-white dark:bg-background dark:animate-gradient-shift"></div>
+        <div className="absolute inset-0 dark:bg-gradient-to-b dark:from-transparent dark:via-transparent dark:to-card/20"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-transparent to-transparent dark:from-blue-400/20 blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-20">
@@ -66,19 +93,24 @@ export default function Hero() {
             ref={badgeRef}
             className="inline-flex items-center gap-2 px-4 py-2 mb-12 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-semibold shadow-lg transition-all duration-700"
           >
-            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 rounded-full animate-pulse bg-green-500"></div>
             Available for new projects
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-[0.9] mb-8 md:mb-12">
-            <span className="block text-gray-900 dark:text-white">Design that drives</span>
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
-              real impact
+          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-[0.9] mb-10 md:mb-12">
+            <span ref={h1Line1Ref} className="block text-gray-900 dark:text-white">
+              Designing products and services
+            </span>
+            <span
+              ref={h1Line2Ref}
+              className="block bg-gradient-to-r from-blue-600 to-blue-500 dark:from-blue-400 dark:to-blue-300 bg-clip-text text-transparent"
+            >
+              for users
             </span>
           </h1>
 
-          <div className="max-w-3xl mb-16 md:mb-20">
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
               I partner with forward-thinking teams to create digital experiences that solve complex problems and
               deliver measurable results.
             </p>
@@ -101,12 +133,10 @@ export default function Hero() {
           </div>
 
           {/* Subtle divider with artistic gradient */}
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-700 to-transparent mb-16"></div>
+          <div className="w-full h-px bg-gradient-to-r from-gray-200 dark:from-gray-700 to-transparent mb-16"></div>
 
           <div className="mb-20">
-            <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-8 uppercase tracking-wider">
-              Trusted by leading organizations
-            </p>
+            <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-8 uppercase tracking-wider">{""}</p>
             <div className="flex flex-wrap items-center justify-start gap-8 md:gap-12 opacity-60 dark:opacity-50">
               {[
                 { name: "Home Office", src: "/images/home-office-logo.svg" },

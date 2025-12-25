@@ -44,8 +44,9 @@
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 10%;
 
+    /* Improved muted text contrast for better readability */
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 10%;
@@ -63,28 +64,29 @@
   .dark {
     /* Made dark mode colors darker for better contrast */
     --background: 270 2% 8%;
-    --foreground: 270 1% 95%;
+    --foreground: 270 1% 98%;
 
     --card: 270 2% 12%;
-    --card-foreground: 270 1% 95%;
+    --card-foreground: 270 1% 98%;
 
     --popover: 270 2% 12%;
-    --popover-foreground: 270 1% 95%;
+    --popover-foreground: 270 1% 98%;
 
     --primary: 270 2% 16%;
-    --primary-foreground: 270 1% 95%;
+    --primary-foreground: 270 1% 98%;
 
     --secondary: 270 2% 10%;
-    --secondary-foreground: 270 1% 85%;
+    --secondary-foreground: 270 1% 90%;
 
+    /* Improved muted text contrast for dark mode */
     --muted: 270 2% 10%;
-    --muted-foreground: 270 1% 65%;
+    --muted-foreground: 270 1% 70%;
 
     --accent: 270 2% 16%;
-    --accent-foreground: 270 1% 95%;
+    --accent-foreground: 270 1% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 270 1% 95%;
+    --destructive-foreground: 270 1% 98%;
 
     --border: 270 2% 20%;
     --input: 270 2% 20%;
@@ -235,6 +237,39 @@
   50% {
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
   }
+}
+
+/* Added subtle background gradient shift animation */
+@keyframes gradient-shift {
+  0% {
+    background-color: hsl(0, 0%, 98%);
+  }
+  50% {
+    background-color: hsl(210, 20%, 98%);
+  }
+  100% {
+    background-color: hsl(0, 0%, 98%);
+  }
+}
+
+.dark .animate-gradient-shift {
+  animation: gradient-shift-dark 20s ease-in-out infinite;
+}
+
+@keyframes gradient-shift-dark {
+  0% {
+    background-color: hsl(270, 2%, 8%);
+  }
+  50% {
+    background-color: hsl(225, 10%, 10%);
+  }
+  100% {
+    background-color: hsl(270, 2%, 8%);
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 20s ease-in-out infinite;
 }
 
 .animate-float {

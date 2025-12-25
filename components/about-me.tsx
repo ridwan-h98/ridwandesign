@@ -79,17 +79,16 @@ export default function AboutMe() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-32 bg-white dark:bg-background font-helvetica border-b border-gray-100 dark:border-border relative overflow-hidden"
+      className="py-20 md:py-28 bg-white dark:bg-background font-helvetica border-b border-gray-100 dark:border-border relative overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/3 to-transparent dark:from-blue-400/6 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-green-500/3 to-transparent dark:from-green-400/6 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-transparent to-transparent dark:from-blue-400/15 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-transparent to-transparent dark:from-blue-500/15 blur-3xl"></div>
       </div>
       {/* </CHANGE> */}
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
-          {/* Left column - About text and experience */}
           <div ref={(el) => (elementsRef.current[1] = el)} className="animate-on-scroll order-2 md:order-1">
             <div
               className="bg-white dark:bg-card rounded-2xl border border-gray-100 dark:border-border shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
@@ -105,31 +104,25 @@ export default function AboutMe() {
               }}
             >
               <div className="p-8 md:p-10">
-                <div className="mb-6">
+                <div className="mb-8">
                   <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight leading-[0.9]">
-                    Lil'bout{" "}
-                    <span className="bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
-                      me
-                    </span>
+                    Lil'bout <span className="text-blue-600 dark:text-blue-400">me</span>
                   </h3>
                 </div>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">
-                  <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-                    I transform complex business challenges into intuitive user experiences. With a computer science
-                    foundation and design expertise, I bridge technical constraints with user needs to deliver
-                    measurable results.
+                  <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                    Hey there! I'm Ridwan 🙂‍↔️ currently working as a product designer.
                   </p>
 
                   <div className="w-full h-px bg-gray-200 dark:bg-white/20 my-8"></div>
 
-                  {/* Work section */}
                   <div className="mt-8">
-                    <div className="mb-8">
+                    <div className="mb-6">
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Experience</h3>
                     </div>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                       <div className="flex items-start flex-col sm:flex-row">
                         <div className="flex-shrink-0 w-12 h-12 bg-[#2B0A3D] dark:bg-[#2B0A3D] rounded-full flex items-center justify-center mr-4 shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-md">
                           <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center">
@@ -291,7 +284,6 @@ export default function AboutMe() {
               </div>
             </div>
 
-            {/* Mentoring Section */}
             <div className="mt-8">
               <div
                 className="bg-white dark:bg-card rounded-2xl border border-gray-100 dark:border-border shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 p-8 md:p-10"
@@ -307,7 +299,7 @@ export default function AboutMe() {
                 }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mr-4 group transition-all duration-300 hover:bg-green-100 dark:hover:bg-green-800/50">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-800/50 rounded-full flex items-center justify-center mr-4 group transition-all duration-300 hover:bg-cyan-100 dark:hover:bg-cyan-800/50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -316,7 +308,7 @@ export default function AboutMe() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="w-6 h-6 text-blue-600 dark:text-blue-300 transition-all duration-300 group-hover:text-green-600 dark:group-hover:text-green-400"
+                      className="w-6 h-6 text-blue-600 dark:text-blue-300 transition-all duration-300 group-hover:text-cyan-600 dark:group-hover:text-cyan-400"
                       style={{ animation: "iconFloat 4s ease-in-out infinite" }}
                     >
                       <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
@@ -353,17 +345,13 @@ export default function AboutMe() {
             </div>
           </div>
 
-          {/* Right column - Polaroid image */}
-          <div
-            ref={(el) => (elementsRef.current[0] = el)}
-            className="animate-on-scroll flex justify-center items-center h-full order-1 md:order-2"
-          >
+          <div ref={(el) => (elementsRef.current[0] = el)} className="animate-on-scroll order-1 md:order-2">
             <div
-              className="relative bg-white dark:bg-gray-100 p-6 shadow-xl max-w-lg mx-auto transform rotate-[-2deg] transition-all duration-700 hover:rotate-[3deg] hover:scale-110 hover:shadow-2xl border border-gray-100"
+              className="relative bg-white dark:bg-gray-50 rounded-2xl shadow-lg overflow-hidden"
               style={{
-                animation: "polaroidIn 1s ease-out forwards",
-                opacity: 0,
-                transform: "translateY(20px) rotate(-2deg)",
+                transform: "rotate(-2deg)",
+                padding: "1.5rem",
+                animation: "polaroidIn 0.8s ease-out forwards",
               }}
             >
               <div className="relative aspect-[3/4] w-full overflow-hidden">

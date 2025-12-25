@@ -174,24 +174,23 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 md:py-32 bg-white dark:bg-background font-helvetica relative overflow-hidden border-t border-b border-gray-200 dark:border-white/10"
+      className="py-20 md:py-28 bg-white dark:bg-background font-helvetica relative overflow-hidden border-t border-b border-gray-200 dark:border-white/10"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-500/5 to-transparent dark:from-emerald-400/8 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-green-500/5 to-transparent dark:from-green-400/8 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-transparent to-transparent dark:from-blue-400/15 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-transparent to-transparent dark:from-blue-500/15 blur-3xl"></div>
       </div>
+      {/* </CHANGE> */}
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="max-w-6xl mx-auto mb-20 md:mb-24">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.9] mb-6">
+        <div className="max-w-6xl mx-auto mb-16 md:mb-20">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.9] mb-8">
             <span className="block text-gray-900 dark:text-white">Selected</span>
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
-              work
-            </span>
+            <span className="block dark:text-blue-400 text-blue-500">work</span>
           </h2>
           <div className="max-w-2xl">
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
-              Case studies showcasing design solutions that drive measurable business impact.
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+              Case studies showcasing design solutions
             </p>
           </div>
         </div>
@@ -206,14 +205,14 @@ export default function Projects() {
           </div>
         ) : (
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-24 lg:gap-y-28 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 lg:gap-x-20 gap-y-20 lg:gap-y-24 items-start">
               {allProjects.map((project, index) => (
                 <div
                   key={project.slug}
                   ref={(el) => (elementsRef.current[index] = el)}
                   className="animate-on-scroll group flex flex-col h-full"
                 >
-                  <div className="relative mb-8 overflow-hidden rounded-lg bg-gray-100 dark:bg-card">
+                  <div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 dark:bg-card">
                     <div className="aspect-[4/3] w-full">
                       <Image
                         src={
@@ -228,7 +227,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <div className="inline-flex items-center px-3 py-1 bg-gray-200 dark:bg-secondary text-gray-800 dark:text-secondary-foreground rounded-full text-xs font-semibold">
                       {project.year || "N/A"}
                     </div>
@@ -237,7 +236,7 @@ export default function Projects() {
                       {project.title}
                     </h3>
 
-                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
+                    <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">{project.description}</p>
 
                     <Link
                       href={`/case-studies/${project.slug}`}

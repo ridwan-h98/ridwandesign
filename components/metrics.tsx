@@ -87,40 +87,33 @@ export default function Metrics() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 md:py-32 border-b border-gray-100 dark:border-border font-helvetica bg-white dark:bg-background overflow-hidden relative"
+      className="py-20 md:py-28 border-b border-gray-100 dark:border-border font-helvetica bg-white dark:bg-background overflow-hidden relative"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-emerald-500/4 to-transparent dark:from-emerald-400/7 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-green-500/4 to-transparent dark:from-green-400/7 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-transparent to-transparent dark:from-blue-400/15 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-transparent to-transparent dark:from-blue-500/15 blur-3xl"></div>
       </div>
       {/* End of added gradient background */}
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         {/* Section header */}
-        <div className="relative mb-20 max-w-xl">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-12 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-semibold shadow-lg">
-            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-            Results
-          </div>
+        <div className="relative mb-16 max-w-xl">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-8 tracking-tight leading-[0.9]">
-            Proven{" "}
-            <span className="bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">
-              Success
-            </span>
+            Proven <span className="text-blue-600 dark:text-blue-400">Success</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium max-w-3xl">
-            My work has consistently delivered measurable results across multiple projects and industries.
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium max-w-3xl">
+            Across multiple projects
           </p>
         </div>
 
         {/* Metrics display - aligned grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative">
           {metrics.map((metric, index) => {
             const IconComponent = metric.icon
             return (
               <div
                 key={index}
-                className="group relative bg-white/90 dark:bg-card p-8 rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
+                className="group relative bg-white/90 dark:bg-card p-8 md:p-10 rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:shadow-2xl hover:transform hover:scale-[1.03] overflow-hidden"
                 style={{
                   boxShadow:
                     "0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.02)",
@@ -133,8 +126,8 @@ export default function Metrics() {
 
                 {/* Animated icon at the top of each card */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 dark:bg-secondary mb-4 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 transition-all duration-300">
-                    <IconComponent className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-all duration-300 group-hover:scale-110" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 dark:bg-secondary mb-4 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 transition-all duration-300">
+                    <IconComponent className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-all duration-300 group-hover:scale-110" />
                   </div>
                 </div>
 
@@ -143,14 +136,14 @@ export default function Metrics() {
                   <span className="text-5xl md:text-6xl font-medium tabular-nums tracking-tight text-gray-900 dark:text-white">
                     {metric.value > 1000 ? formatNumber(counts[index]) : counts[index]}
                   </span>
-                  <span className="text-2xl font-medium text-gray-600 dark:text-gray-300 ml-1">{metric.suffix}</span>
+                  <span className="text-2xl font-medium text-gray-600 dark:text-gray-400 ml-1">{metric.suffix}</span>
                 </div>
 
                 {/* Label and description */}
                 <div>
                   <h3 className="text-xl font-medium text-gray-900 dark:text-white mb-3">{metric.label}</h3>
                   <div className="h-px w-12 mb-4 bg-gray-200 dark:bg-border"></div>
-                  <p className="text-gray-600 dark:text-gray-300">{metric.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{metric.description}</p>
                 </div>
               </div>
             )
