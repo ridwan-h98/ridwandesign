@@ -6,30 +6,7 @@ import Image from "next/image"
 export default function AboutMe() {
   const sectionRef = useRef<HTMLElement>(null)
   const elementsRef = useRef<(HTMLDivElement | null)[]>([])
-  const polaroidAnimationStyle = `
-  @keyframes polaroidIn {
-    0% {
-      opacity: 0;
-      transform: translateY(30px) rotate(-3deg);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0) rotate(-2deg);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-  }
-  
-  @keyframes iconPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-  }
-  
-  @keyframes iconFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-2px); }
-  }
-`
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,15 +42,7 @@ export default function AboutMe() {
     }
   }, [])
 
-  useEffect(() => {
-    const styleElement = document.createElement("style")
-    styleElement.innerHTML = polaroidAnimationStyle
-    document.head.appendChild(styleElement)
 
-    return () => {
-      document.head.removeChild(styleElement)
-    }
-  }, [])
 
   return (
     <section
