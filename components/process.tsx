@@ -1,74 +1,4 @@
-"use client"
-
-import { useEffect, useRef } from "react"
-
 export default function Process() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const elementsRef = useRef<(HTMLDivElement | null)[]>([])
-
-  // Scroll animation on element visibility
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Don't add the animation class immediately for cards
-            // Animation will be handled separately with staggered delays
-            if (entry.target === sectionRef.current) {
-              entry.target.classList.add("animate-fade-up")
-            }
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    // Staggered animation for cards
-    elementsRef.current.forEach((el, i) => {
-      if (el) {
-        // Initially hide all cards
-        el.style.opacity = "0"
-        el.style.transform = "translateY(20px)"
-        el.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out"
-
-        // Set up observer for each card
-        const cardObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                // Stagger the animation with increasing delays
-                setTimeout(
-                  () => {
-                    el.style.opacity = "1"
-                    el.style.transform = "translateY(0)"
-                  },
-                  300 * (i + 1),
-                ) // 300ms delay between each card
-                cardObserver.unobserve(el)
-              }
-            })
-          },
-          { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
-        )
-
-        cardObserver.observe(el)
-      }
-    })
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-      elementsRef.current.forEach((el) => {
-        if (el) observer.unobserve(el)
-      })
-    }
-  }, [])
 
   return (
     <section
@@ -83,7 +13,7 @@ export default function Process() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-border" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div ref={sectionRef} className="text-center mb-12 md:mb-16 animate-on-scroll">
+        <div className="text-center mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gray-100 dark:bg-secondary rounded-full text-gray-700 dark:text-secondary-foreground text-sm font-medium">
             Process
           </div>
@@ -98,7 +28,7 @@ export default function Process() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {/* Card 1 */}
           <div
-            ref={(el) => (elementsRef.current[0] = el)}
+            
             className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
@@ -137,7 +67,7 @@ export default function Process() {
 
           {/* Card 2 */}
           <div
-            ref={(el) => (elementsRef.current[1] = el)}
+            
             className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
@@ -176,7 +106,7 @@ export default function Process() {
 
           {/* Card 3 */}
           <div
-            ref={(el) => (elementsRef.current[2] = el)}
+            
             className="group relative bg-white/90 dark:bg-card rounded-xl border border-gray-200/40 dark:border-border transition-all duration-300 hover:transform hover:scale-[1.03] overflow-hidden"
             style={{
               boxShadow:
