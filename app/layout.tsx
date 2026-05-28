@@ -34,6 +34,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var d=document.documentElement;var e=localStorage.getItem('theme');if(e==='dark'||((!e||e==='system')&&window.matchMedia('(prefers-color-scheme:dark)').matches)){d.classList.add('dark')}else{d.classList.remove('dark')}}catch(t){}})()` }} />
       </head>
       <body className="font-helvetica antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
