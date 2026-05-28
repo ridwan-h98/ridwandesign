@@ -280,6 +280,201 @@
   animation: glow 3s ease-in-out infinite;
 }
 
+/* Polaroid animations for about section */
+@keyframes polaroidIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotate(-3deg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-2deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
+}
+
+/* Case study prose styles */
+.prose img {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 2.5rem 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.prose h2 {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  scroll-margin-top: 100px;
+  font-size: 1.875rem;
+  border-bottom: 1px solid rgba(209, 213, 219, 0.3);
+  position: relative;
+}
+
+.prose h2::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(96, 165, 250, 0.6), rgba(59, 130, 246, 0.6));
+  border-radius: 2px;
+}
+
+.dark .prose h2 {
+  border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.prose h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  scroll-margin-top: 100px;
+}
+
+/* Responsive line height for paragraphs */
+.prose p, .prose ul, .prose ol {
+  line-height: 1.9;
+  margin-bottom: 1.75rem;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .prose p, .prose ul, .prose ol {
+    line-height: 2.1;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prose p, .prose ul, .prose ol {
+    line-height: 2.4;
+  }
+}
+
+.prose figure {
+  margin: 3rem 0;
+}
+
+.prose figcaption, 
+.prose img + em {
+  text-align: left;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+  font-style: normal;
+  display: block;
+}
+
+.dark .prose figcaption,
+.dark .prose img + em {
+  color: #9ca3af;
+}
+
+.prose blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem 3rem 2rem 2.5rem;
+  background-color: rgba(249, 250, 251, 0.8);
+  border-radius: 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #1f2937;
+  border-left: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  position: relative;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.prose blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(to bottom, #60a5fa, #3b82f6);
+}
+
+.dark .prose blockquote {
+  background-color: rgba(30, 41, 59, 0.5);
+  color: #f3f4f6;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.dark .prose blockquote::before {
+  background: linear-gradient(to bottom, #60a5fa, #3b82f6);
+}
+
+.prose blockquote p {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
+  padding-top: 0;
+  font-style: normal;
+}
+
+.prose blockquote p::before {
+  content: none;
+}
+
+.prose blockquote p::after {
+  content: "\201D";
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(59, 130, 246, 0.15);
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .prose blockquote {
+    padding: 2rem;
+    font-size: 1.125rem;
+  }
+  
+  .prose blockquote p {
+    font-size: 1.125rem;
+  }
+  
+  .prose blockquote p::after {
+    font-size: 2.5rem;
+    top: 0;
+    right: -0.5rem;
+  }
+}
+
+/* Article paragraph styles */
+.article-paragraph {
+  line-height: 2.2;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.01em;
+}
+
 /* Improved glass morphism */
 .glass {
   background: rgba(255, 255, 255, 0.1);

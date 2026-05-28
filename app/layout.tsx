@@ -35,8 +35,8 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       </head>
-      <body className="font-helvetica antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <body className="font-sans antialiased">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ScrollToTop />
           <ScrollProgress />
           <Suspense>{children}</Suspense>

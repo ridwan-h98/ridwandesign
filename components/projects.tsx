@@ -45,26 +45,9 @@ const thoughtPieces = [
     title: "Structuring user interviews with the right pre-work",
     description:
       "How thoughtful preparation can dramatically improve the quality of insights from user interviews. Learn the techniques that have helped me uncover deeper user needs and motivations.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/structuring-interviews-thumbnail.png",
     tags: ["User Research", "Methodology", "Best Practices"],
     year: "2023",
-  },
-  {
-    slug: "role-of-empathy",
-    title: "Design systems should be made retrospectively",
-    description:
-      "Why building a design system after you've created products leads to more practical, useful tools for your team.",
-    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Design Systems", "UI Design", "Product Development"],
-    year: "2022",
-  },
-  {
-    slug: "balancing-stakeholder-needs",
-    title: "Balancing stakeholder needs with user goals",
-    description: "Strategies for navigating the complex landscape of business requirements and user expectations.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Stakeholder Management", "Product Strategy", "UX Leadership"],
-    year: "2024",
   },
   {
     slug: "simple-user-research",
@@ -163,8 +146,6 @@ export default function Projects() {
       (project) =>
         ![
           "structuring-user-interviews",
-          "role-of-empathy",
-          "balancing-stakeholder-needs",
           "simple-user-research",
         ].includes(project.slug),
     ),

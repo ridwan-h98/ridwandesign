@@ -207,14 +207,6 @@ export default function MarketingOptimizationProject() {
           {/* Main content */}
           <div className="lg:col-span-3">
             <article className="prose prose-lg max-w-3xl mx-auto dark:prose-invert" style={{ lineHeight: 2.2 }}>
-              <style jsx global>{`
-                .article-paragraph {
-                  line-height: 2.2;
-                  margin-bottom: 1.5rem;
-                  font-size: 1.125rem;
-                  letter-spacing: 0.01em;
-                }
-              `}</style>
 
               {/* Section 1: The Challenge */}
               <section id="challenge" className="mb-16">
